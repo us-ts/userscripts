@@ -6,5 +6,12 @@
       "apps/*",
       "packages/*"
     ]
+  },
+  "scripts": {
+    "format": "bunx biome format --write"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.3.1",
+    "wrangler": "^4.45.0"
   }
 }
