@@ -1,0 +1,12 @@
+{
+  "name": "registry",
+  "type": "module",
+  "private": true,
+  "scripts": {},
+  "dependencies": {
+    "@vercel/blob": "^2.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
