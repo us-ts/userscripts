@@ -7,7 +7,9 @@ interface Props {
   children: any;
 }
 
-const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site) : undefined;
+const canonical = Astro.site
+  ? new URL(Astro.url.pathname, Astro.site)
+  : undefined;
 
 const { title, description } = Astro.props;
 ---
