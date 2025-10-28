@@ -1,0 +1,7 @@
+{
+  "name": "@usts/auth",
+  "type": "module",
+  "private": true,
+  "scripts": {},
+  "dependencies": {}
+}

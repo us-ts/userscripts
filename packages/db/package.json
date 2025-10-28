@@ -1,0 +1,7 @@
+{
+  "name": "@usts/db",
+  "type": "module",
+  "private": true,
+  "scripts": {},
+  "dependencies": {}
+}
