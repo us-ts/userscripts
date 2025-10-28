@@ -3,5 +3,8 @@
   "type": "module",
   "private": true,
   "scripts": {},
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "prisma": "catalog:"
+  }
 }

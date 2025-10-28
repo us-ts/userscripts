@@ -5,7 +5,10 @@
     "packages": [
       "apps/*",
       "packages/*"
-    ]
+    ],
+    "catalog": {
+      "prisma": "^6.18.0"
+    }
   },
   "scripts": {
     "format": "bunx biome format --write"
