@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {},
   "dependencies": {
-    "better-auth": "catalog:"
+    "better-auth": "catalog:",
+    "@usts/db": "workspace:*"
   }
 }
