@@ -2,9 +2,8 @@
   "name": "@usts/auth",
   "type": "module",
   "private": true,
-  "scripts": {},
   "dependencies": {
-    "better-auth": "catalog:",
-    "@usts/db": "workspace:*"
+    "@usts/db": "workspace:*",
+    "better-auth": "catalog:"
   }
 }
