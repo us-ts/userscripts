@@ -2,7 +2,9 @@
   "extends": "astro/tsconfigs/strictest",
   "compilerOptions": {
     "baseUrl": ".",
-    "paths": { "~/*": ["./src/*"] }
+    "paths": { "~/*": ["./src/*"] },
+    "jsxImportSource": "solid-js",
+    "jsx": "preserve"
   },
   "include": [".astro/types.d.ts", "**/*"],
   "exclude": ["dist"]
