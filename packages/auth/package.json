@@ -3,5 +3,7 @@
   "type": "module",
   "private": true,
   "scripts": {},
-  "dependencies": {}
+  "dependencies": {
+    "better-auth": "catalog:"
+  }
 }

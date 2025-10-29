@@ -9,6 +9,7 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.1.16",
     "astro": "^5.15.2",
+    "better-auth": "catalog:",
     "tailwindcss": "^4.1.16"
   }
 }
