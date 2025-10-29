@@ -3,7 +3,9 @@
   "type": "module",
   "private": true,
   "scripts": {},
-  "dependencies": {},
+  "dependencies": {
+    "@prisma/client": "catalog:"
+  },
   "devDependencies": {
     "prisma": "catalog:"
   }
