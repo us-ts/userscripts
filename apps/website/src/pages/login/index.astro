@@ -1,7 +1,7 @@
 ---
 import Layout from "~/layouts/Layout.astro";
 
-import TopBar from "~/components/TopBar.astro";
+import SignInButton from "~/components/SignInButton.tsx";
 
 export const prerender = true;
 
@@ -10,8 +10,12 @@ const description = "Userscripts registry";
 ---
 
 <Layout {title} {description}>
-  <TopBar />
   <main class="flex flex-col items-center justify-center">
-    <h1 class="text-4xl font-bold">Userscripts</h1>
+    <div>
+      <h1 class="text-4xl font-bold">Log in</h1>
+      <div class="flex flex-col gap-4 w-full">
+        <SignInButton client:load provider="github" />
+      </div>
+    </div>
   </main>
 </Layout>
