@@ -24,5 +24,10 @@ export const auth = betterAuth({
     },
   },
 
-  plugins: [passkey(), apiKey(), bearer(), oneTimeToken()],
+  plugins: [
+    passkey(),
+    apiKey(),
+    bearer({ requireSignature: true }),
+    oneTimeToken({ storeToken: "hashed" }),
+  ],
 } satisfies BetterAuthOptions);
