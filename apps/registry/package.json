@@ -3,9 +3,12 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "bun --bun ./scripts/build"
+    "build": "bun --bun ./scripts/build",
+    "dev": "bun --bun ./scripts/dev"
   },
   "dependencies": {
+    "@elysiajs/cors": "^1.4.0",
+    "@usts/auth": "workspace:*",
     "@vercel/blob": "^2.0.0",
     "better-auth": "catalog:",
     "elysia": "^1.4.13"
