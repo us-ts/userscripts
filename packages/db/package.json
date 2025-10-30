@@ -9,6 +9,7 @@
     "@prisma/client": "catalog:"
   },
   "devDependencies": {
-    "prisma": "catalog:"
+    "prisma": "catalog:",
+    "tsdown": "catalog:"
   }
 }
