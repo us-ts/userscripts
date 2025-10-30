@@ -2,7 +2,7 @@ import { betterAuth, type BetterAuthOptions } from "better-auth";
 
 import { prismaAdapter } from "better-auth/adapters/prisma";
 
-import { apiKey, bearer } from "better-auth/plugins";
+import { apiKey, bearer, organization } from "better-auth/plugins";
 
 import { passkey } from "better-auth/plugins/passkey";
 import { oneTimeToken } from "better-auth/plugins/one-time-token";
@@ -25,6 +25,7 @@ export const auth = betterAuth({
   },
 
   plugins: [
+    organization(),
     passkey(),
     apiKey(),
     bearer({ requireSignature: true }),

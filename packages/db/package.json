@@ -2,7 +2,9 @@
   "name": "@usts/db",
   "type": "module",
   "private": true,
-  "scripts": {},
+  "scripts": {
+    "prisma:generate": "bunx prisma generate"
+  },
   "dependencies": {
     "@prisma/client": "catalog:"
   },
