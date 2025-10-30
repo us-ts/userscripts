@@ -3,6 +3,7 @@
   "type": "module",
   "private": true,
   "scripts": {
+    "build": "bunx --bun tsdown --dts",
     "prisma:generate": "bunx prisma generate"
   },
   "dependencies": {
@@ -11,5 +12,12 @@
   "devDependencies": {
     "prisma": "catalog:",
     "tsdown": "catalog:"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js",
+    "./package.json": "./package.json"
   }
 }
