@@ -4,6 +4,10 @@
   
   "bunVersion": "1.x",
 
+  "framework": "elysia",
+
+  "installCommand": "bun install",
+
   "rewrites": [
     {
       "source": "/(.*)",
