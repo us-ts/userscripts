@@ -3,15 +3,19 @@
   "type": "module",
   "private": true,
   "scripts": {
+    "prisma:generate": "bunx --bun prisma generate",
     "build": "bun --bun ./scripts/build",
     "dev": "bun --bun ./scripts/dev"
   },
   "dependencies": {
     "@elysiajs/cors": "^1.4.0",
-    "@usts/db": "workspace:*",
+    "@prisma/client": "^6.18.0",
     "@vercel/blob": "^2.0.0",
     "better-auth": "catalog:",
     "elysia": "^1.4.13",
     "zod": "catalog:"
+  },
+  "devDependencies": {
+    "prisma": "^6.18.0"
   }
 }
