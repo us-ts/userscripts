@@ -10,7 +10,9 @@
     "@elysiajs/cors": "^1.4.0",
     "@usts/auth": "workspace:*",
     "@vercel/blob": "^2.0.0",
+    "@usts/db": "workspace:*",
     "better-auth": "catalog:",
-    "elysia": "^1.4.13"
+    "elysia": "^1.4.13",
+    "zod": "catalog:"
   }
 }

@@ -1,9 +1,8 @@
 import { createAuthClient } from "better-auth/solid";
+import type { BetterAuthClientOptions } from "better-auth/client";
 
 type AuthClient = ReturnType<typeof createAuthClient>;
 
-const BASE_URL = "http://localhost:3000";
-
 export const authClient: AuthClient = createAuthClient({
-  baseURL: BASE_URL,
-});
+  baseURL: process.env.REGISTRY_URL,
+} satisfies BetterAuthClientOptions);

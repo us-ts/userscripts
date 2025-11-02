@@ -1,7 +1,7 @@
 import { Elysia } from "elysia";
 import { cors } from "@elysiajs/cors";
 
-import { auth } from "@usts/auth";
+import { auth } from "~/lib/auth";
 
 export default new Elysia()
   .use(

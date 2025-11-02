@@ -3,16 +3,11 @@
   "type": "module",
   "private": true,
   "dependencies": {
-    "@usts/db": "workspace:*",
     "better-auth": "catalog:"
-  },
-  "devDependencies": {
-    "tsdown": "catalog:"
   },
   "main": "./src/index.ts",
   "module": "./src/index.ts",
   "exports": {
-    ".": "./src/index.ts",
-    "./client": "./src/client.ts"
+    ".": "./src/index.ts"
   }
 }
