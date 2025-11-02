@@ -3,7 +3,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "bun --bun ./scripts/build",
+    "build": "bun --bun vercel build",
     "dev": "bun --bun ./scripts/dev"
   },
   "dependencies": {
