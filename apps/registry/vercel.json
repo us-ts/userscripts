@@ -7,6 +7,7 @@
   "framework": "elysia",
 
   "installCommand": "bun install",
+  "buildCommand": "bun run build",
 
   "rewrites": [
     {
