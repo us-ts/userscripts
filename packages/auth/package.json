@@ -5,9 +5,11 @@
   "dependencies": {
     "better-auth": "catalog:"
   },
-  "main": "./src/index.ts",
-  "module": "./src/index.ts",
+  "main": "./src/client.ts",
+  "module": "./src/client.ts",
+  "types": "./src/client.ts",
   "exports": {
-    ".": "./src/index.ts"
+    ".": "./src/client.ts",
+    "./client": "./src/client.ts"
   }
 }
