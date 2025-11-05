@@ -7,7 +7,7 @@
   "framework": "elysia",
 
   "installCommand": "bun install",
-  "buildCommand": "vercel build",
+  "buildCommand": "bun run build",
   "outputDirectory": "dist",
 
   "rewrites": [
