@@ -7,7 +7,7 @@ import { apiKey, bearer, organization } from "better-auth/plugins";
 import { passkey } from "better-auth/plugins/passkey";
 import { oneTimeToken } from "better-auth/plugins/one-time-token";
 
-import { prisma } from "@usts/db";
+import { prisma } from "~/db";
 
 import env from "~/env";
 
