@@ -9,13 +9,13 @@
   },
   "dependencies": {
     "@elysiajs/cors": "^1.4.0",
-    "@prisma/client": "^6.18.0",
+    "@prisma/client": "^6.19.0",
     "@vercel/blob": "^2.0.0",
     "better-auth": "catalog:",
-    "elysia": "^1.4.13",
+    "elysia": "^1.4.15",
     "zod": "catalog:"
   },
   "devDependencies": {
-    "prisma": "^6.18.0"
+    "prisma": "^6.19.0"
   }
 }
