@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "prisma:generate": "bunx --bun prisma generate",
-    "build": "bun --bun ./scripts/build",
+    "build": "bun run prisma:generate && bun --bun ./scripts/build",
     "dev": "bun --bun ./scripts/dev"
   },
   "dependencies": {
