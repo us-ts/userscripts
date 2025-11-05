@@ -4,19 +4,17 @@ import * as path from "node:path";
 
 const outDir = ".vercel/output";
 const funcDir = path.join(outDir, "functions", "index.func");
-const staticDir = path.join(outDir, "static");
 const entryJs = path.join(funcDir, "index.js");
 
 async function main() {
   await fs.rm(outDir, { recursive: true, force: true });
   await fs.mkdir(funcDir, { recursive: true });
-  await fs.mkdir(staticDir, { recursive: true });
 
   // Bundle a single ESM file for Node runtime (not --target bun)
   await $`bun build ./src/index.ts \
     --target=bun \
     --format=esm \
-    --minify-syntax --minify-whitespace \
+    --minify \
     --outfile ${entryJs}`;
 
   Bun.write(
