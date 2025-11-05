@@ -10,7 +10,6 @@ async function main() {
   await fs.rm(outDir, { recursive: true, force: true });
   await fs.mkdir(funcDir, { recursive: true });
 
-  // Bundle a single ESM file for Node runtime (not --target bun)
   await $`bun build ./src/index.ts \
     --target=bun \
     --format=esm \
