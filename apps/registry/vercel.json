@@ -1,13 +1,9 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "version": 2,
-  
-  "bunVersion": "1.x",
-
-  "framework": "elysia",
-
   "installCommand": "bun install",
   "buildCommand": "bun run build",
+  "outputDirectory": "dist",
 
   "rewrites": [
     {
