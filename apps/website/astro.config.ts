@@ -19,6 +19,6 @@ export default defineConfig({
         url: true,
       }),
     },
-    validateSecrets: true,
+    validateSecrets: false,
   },
 });
