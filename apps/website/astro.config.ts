@@ -11,14 +11,14 @@ export default defineConfig({
   integrations: [solid()],
   vite: { plugins: [tailwindcss()] },
 
-  env: {
-    schema: {
-      REGISTRY_URL: envField.string({
-        context: "client",
-        access: "public",
-        url: true,
-      }),
-    },
-    validateSecrets: false,
-  },
+  // env: {
+  //   schema: {
+  //     REGISTRY_URL: envField.string({
+  //       context: "client",
+  //       access: "public",
+  //       url: true,
+  //     }),
+  //   },
+  //   validateSecrets: true,
+  // },
 });
