@@ -1,6 +1,6 @@
 import type { JSX } from "solid-js";
 
-import { authClient } from "@usts/auth/client";
+import { authClient } from "~/lib/auth";
 
 import Button from "~/components/ui/Button";
 
