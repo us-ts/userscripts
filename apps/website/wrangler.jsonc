@@ -4,9 +4,11 @@
   "name": "u",
   "compatibility_date": "2025-11-05",
 
+  "main": "./dist/_worker.js/index.js",
+
   "assets": {
-    "directory": "./dist",
-    "not_found_handling": "404-page"
+    "binding": "ASSETS",
+    "directory": "./dist"
   },
 
   "build": {

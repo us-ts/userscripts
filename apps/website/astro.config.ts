@@ -17,7 +17,7 @@ export default defineConfig({
         context: "client",
         access: "public",
         url: true,
-        // default: "http://localhost:3000",
+        default: "https://r.u.rman.dev",
       }),
     },
     validateSecrets: true,
