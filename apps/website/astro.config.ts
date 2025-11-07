@@ -11,14 +11,15 @@ export default defineConfig({
   integrations: [solid()],
   vite: { plugins: [tailwindcss()] },
 
-  // env: {
-  //   schema: {
-  //     REGISTRY_URL: envField.string({
-  //       context: "client",
-  //       access: "public",
-  //       url: true,
-  //     }),
-  //   },
-  //   validateSecrets: true,
-  // },
+  env: {
+    schema: {
+      REGISTRY_URL: envField.string({
+        context: "client",
+        access: "public",
+        url: true,
+        default: "http://localhost:3000",
+      }),
+    },
+    validateSecrets: true,
+  },
 });
