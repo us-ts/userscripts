@@ -4,9 +4,9 @@ datasource db {
 }
 
 generator client {
-  provider      = "prisma-client-js"
-  output        = "../generated/client"
-  binaryTargets = ["native", "rhel-openssl-3.0.x"]
+  provider   = "prisma-client"
+  engineType = "client"
+  output     = "../src/db/generated"
 }
 
 model User {
