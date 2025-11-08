@@ -3,13 +3,20 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "bun --bun ./scripts/build"
+    "prisma:generate": "bunx --bun prisma generate",
+    "build": "bun run prisma:generate && bun --bun ./scripts/build",
+    "dev": "bun --bun ./scripts/dev"
   },
   "dependencies": {
+    "@elysiajs/cors": "^1.4.0",
+    "@prisma/adapter-neon": "^6.19.0",
+    "@prisma/client": "^6.19.0",
     "@vercel/blob": "^2.0.0",
-    "elysia": "^1.4.13"
+    "better-auth": "catalog:",
+    "elysia": "^1.4.15",
+    "zod": "catalog:"
   },
   "devDependencies": {
-    "typescript": "^5.9.3"
+    "prisma": "^6.19.0"
   }
 }

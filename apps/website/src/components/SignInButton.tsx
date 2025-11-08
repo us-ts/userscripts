@@ -1,0 +1,32 @@
+import type { JSX } from "solid-js";
+
+import { authClient } from "~/lib/auth";
+
+import { CLIENT_URL } from "astro:env/client";
+
+import Button from "~/components/ui/Button";
+
+type OAuthProvider = "github" & {};
+
+interface SignInButtonProps {
+  provider: OAuthProvider;
+}
+
+const signInWith = (provider: OAuthProvider) => () => {
+  return authClient.signIn.social({
+    provider,
+    callbackURL: `${CLIENT_URL}/dashboard`,
+  });
+};
+
+export default function SignInButton(props: SignInButtonProps): JSX.Element {
+  const providerCapitalized =
+    props.provider.charAt(0).toUpperCase() + props.provider.slice(1);
+
+  return (
+    <Button onClick={signInWith(props.provider)}>
+      {"Sign in with "}
+      {providerCapitalized}
+    </Button>
+  );
+}

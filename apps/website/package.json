@@ -4,14 +4,19 @@
   "private": true,
   "scripts": {
     "dev": "bunx astro dev",
-    "build": "bunx astro build"
+    "build": "bunx astro build",
+    "deploy": "bunx wrangler deploy"
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.1.16",
-    "astro": "^5.15.1",
-    "tailwindcss": "^4.1.16"
+    "@astrojs/cloudflare": "^12.6.10",
+    "@astrojs/solid-js": "^5.1.3",
+    "@tailwindcss/vite": "^4.1.17",
+    "astro": "^5.15.4",
+    "better-auth": "catalog:",
+    "solid-js": "^1.9.10",
+    "tailwindcss": "^4.1.17"
   },
   "devDependencies": {
-    "typescript": "^5.9.3"
+    "wrangler": "catalog:"
   }
 }

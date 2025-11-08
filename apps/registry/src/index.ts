@@ -1,3 +1,6 @@
 import { Elysia } from "elysia";
 
-export default new Elysia().get("/", () => ({}));
+import auth from "./auth";
+import api from "./api";
+
+export default new Elysia().use(auth).use(api);

@@ -1,0 +1,23 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+
+  "name": "u",
+
+  "compatibility_date": "2025-11-05",
+
+  "compatibility_flags": ["nodejs_compat"],
+
+  "main": "./dist/_worker.js/index.js",
+
+  "assets": {
+    "binding": "ASSETS",
+    "directory": "./dist"
+  },
+
+  "build": {
+    "command": "bun run build",
+    "cwd": "."
+  },
+
+  "observability": { "logs": { "enabled": true } }
+}
