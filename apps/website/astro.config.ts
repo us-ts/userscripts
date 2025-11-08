@@ -19,7 +19,15 @@ export default defineConfig({
         url: true,
         default: "https://r.u.rman.dev",
       }),
+      CLIENT_URL: envField.string({
+        context: "client",
+        access: "public",
+        url: true,
+        default: "https://u.rman.dev",
+      }),
     },
     validateSecrets: true,
   },
+
+  site: process.env.CLIENT_URL!,
 });

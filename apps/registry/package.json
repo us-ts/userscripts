@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@elysiajs/cors": "^1.4.0",
+    "@prisma/adapter-neon": "^6.19.0",
     "@prisma/client": "^6.19.0",
     "@vercel/blob": "^2.0.0",
     "better-auth": "catalog:",
