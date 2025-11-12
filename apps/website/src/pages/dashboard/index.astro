@@ -5,7 +5,7 @@ import { authClient } from "~/lib/auth";
 
 const headers = Astro.request.headers;
 
-const { data, error } = await authClient.getSession({}, { headers });
+const { data } = await authClient.getSession({}, { headers });
 
 if (!data) {
   return Astro.redirect("/login");
