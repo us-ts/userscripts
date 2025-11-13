@@ -28,8 +28,8 @@ export const auth = betterAuth({
 
   plugins: [
     organization(),
-    passkey(),
-    apiKey(),
+    passkey(), // https://www.better-auth.com/docs/plugins/passkey#addregister-a-passkey
+    apiKey(), // https://www.better-auth.com/docs/plugins/api-key#create-an-api-key
     bearer({ requireSignature: true }),
     oneTimeToken({ storeToken: "hashed" }),
   ],
