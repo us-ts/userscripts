@@ -1,0 +1,38 @@
+{
+  "name": "usts",
+  "version": "0.0.2",
+  "type": "module",
+  "author": "GameRoMan",
+  "license": "MIT",
+  "scripts": {
+    "build": "bunx --bun tsdown",
+    "npm:publish": "bun run build && bun publish"
+  },
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "LICENSE"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "./bin/cli": "./dist/bin/cli.js",
+    "./config": "./dist/config.js",
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "usts": "./dist/bin/cli/index.js"
+  },
+  "engines": {
+    "node": ">=22.0.0",
+    "bun": ">=1.2.20"
+  },
+  "dependencies": {
+    "rolldown": "^1.0.0-beta.50",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "tsdown": "catalog:"
+  }
+}
