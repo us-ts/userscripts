@@ -13,7 +13,7 @@ import env from "~/env";
 
 export const auth = betterAuth({
   secret: env.BETTER_AUTH_SECRET,
-  baseURL: env.REGISTRY_URL,
+  baseURL: env.VERCEL_URL ?? env.REGISTRY_URL,
 
   trustedOrigins: [env.CLIENT_URL],
 

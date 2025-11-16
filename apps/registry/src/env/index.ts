@@ -1,6 +1,7 @@
 import * as z from "zod/mini";
 
 const EnvSchema = z.object({
+  VERCEL_URL: z.optional(z.url()),
   REGISTRY_URL: z.url(),
   CLIENT_URL: z.url(),
   BETTER_AUTH_SECRET: z.string(),
