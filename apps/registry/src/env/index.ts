@@ -1,8 +1,16 @@
 import * as z from "zod/mini";
 
+const domainToUrlSchema = z.pipe(
+  z.pipe(
+    z.string(),
+    z.transform((val) => `https://${val}`)
+  ),
+  z.url()
+);
+
 const VercelEnvSchema = z.object({
   VERCEL: z.literal(1),
-  VERCEL_URL: z.url(),
+  VERCEL_URL: domainToUrlSchema,
 });
 
 const EnvSchema = z.object({
@@ -14,11 +22,10 @@ const EnvSchema = z.object({
   DATABASE_URL: z.url(),
 });
 
-console.log(process.env);
-
 const env = z
-  .readonly(
-    z.intersection(z.union([VercelEnvSchema, z.strictObject({})]), EnvSchema)
+  .intersection(
+    z.union([z.readonly(VercelEnvSchema), z.object({})]),
+    z.readonly(EnvSchema)
   )
   .parse(process.env);
 
