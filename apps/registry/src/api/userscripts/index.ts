@@ -6,7 +6,10 @@ export default new Elysia({ prefix: "/userscripts" })
   .use(auth)
   .get(
     "/",
-    async ({ authData, authApi, headers }) => {
+    async ({ authData, authApi, headers, status }) => {
+      if (!authData) {
+        return status("Unauthorized");
+      }
       const sessions = await authApi.listSessions({ headers });
       return { method: "GET", authData, sessions };
     },
@@ -14,7 +17,10 @@ export default new Elysia({ prefix: "/userscripts" })
   )
   .post(
     "/",
-    async ({ authData, authApi, headers }) => {
+    async ({ authData, authApi, headers, status }) => {
+      if (!authData) {
+        return status("Unauthorized");
+      }
       const sessions = await authApi.listSessions({ headers });
       return { method: "POST", authData, sessions };
     },
