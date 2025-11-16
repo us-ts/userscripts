@@ -1,7 +1,11 @@
 import * as z from "zod/mini";
 
+const VercelEnvSchema = z.object({
+  VERCEL: z.literal(1),
+  VERCEL_URL: z.url(),
+});
+
 const EnvSchema = z.object({
-  VERCEL_URL: z.optional(z.url()),
   REGISTRY_URL: z.url(),
   CLIENT_URL: z.url(),
   BETTER_AUTH_SECRET: z.string(),
@@ -10,6 +14,12 @@ const EnvSchema = z.object({
   DATABASE_URL: z.url(),
 });
 
-const env = z.readonly(EnvSchema).parse(process.env);
+console.log(process.env);
+
+const env = z
+  .readonly(
+    z.intersection(z.union([VercelEnvSchema, z.strictObject({})]), EnvSchema)
+  )
+  .parse(process.env);
 
 export default env;
