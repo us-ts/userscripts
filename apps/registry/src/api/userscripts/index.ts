@@ -4,17 +4,7 @@ import auth from "~/auth";
 
 export default new Elysia({ prefix: "/userscripts" })
   .use(auth)
-  .get(
-    "/",
-    async ({ authData, authApi, headers, status }) => {
-      if (!authData) {
-        return status("Unauthorized");
-      }
-      const sessions = await authApi.listSessions({ headers });
-      return { method: "GET", authData, sessions };
-    },
-    { auth: true }
-  )
+  .get("/", ({ path }) => ({ path }))
   .post(
     "/",
     async ({ authData, authApi, headers, status }) => {
