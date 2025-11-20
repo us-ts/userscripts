@@ -22,6 +22,8 @@ const EnvSchema = z.object({
   DATABASE_URL: z.url(),
 });
 
+export type Env = z.infer<typeof EnvSchema>;
+
 const env = z
   .intersection(
     z.union([z.readonly(VercelEnvSchema), z.object({})]),
