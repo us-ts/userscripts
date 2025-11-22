@@ -12,4 +12,12 @@ export default new Elysia()
       allowedHeaders: ["Content-Type", "Authorization"],
     })
   )
-  .mount(auth.handler);
+  .mount(auth.handler)
+  .macro({
+    auth: {
+      async resolve({ request: { headers } }) {
+        const session = await auth.api.getSession({ headers });
+        return { authData: session, authApi: auth.api } as const;
+      },
+    },
+  });
