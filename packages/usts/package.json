@@ -17,12 +17,12 @@
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
-    "./bin/cli": "./dist/bin/cli.js",
-    "./config": "./dist/config.js",
+    "./bin/cli": "./dist/bin/cli.mjs",
+    "./config": "./dist/config.mjs",
     "./package.json": "./package.json"
   },
   "bin": {
-    "usts": "./dist/bin/cli/index.js"
+    "usts": "./dist/bin/cli.mjs"
   },
   "engines": {
     "node": ">=22.0.0",
