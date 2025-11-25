@@ -3,20 +3,22 @@
   "type": "module",
   "private": true,
   "scripts": {
+    "auth:generate": "bunx --bun @better-auth/cli generate --config src/auth/index.ts --output prisma/schema.prisma",
     "prisma:generate": "bunx --bun prisma generate",
     "build": "bun run prisma:generate && bun --bun ./scripts/build",
     "dev": "bun --bun ./scripts/dev"
   },
   "dependencies": {
     "@elysiajs/cors": "^1.4.0",
-    "@prisma/adapter-neon": "^6.19.0",
-    "@prisma/client": "^6.19.0",
+    "@prisma/adapter-neon": "^7.0.1",
+    "@prisma/client": "^7.0.1",
     "@vercel/blob": "^2.0.0",
     "better-auth": "catalog:",
     "elysia": "^1.4.16",
     "zod": "catalog:"
   },
   "devDependencies": {
-    "prisma": "^6.19.0"
+    "@better-auth/cli": "^1.4.1",
+    "prisma": "^7.0.1"
   }
 }

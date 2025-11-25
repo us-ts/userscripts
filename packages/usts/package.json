@@ -17,20 +17,20 @@
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
-    "./bin/cli": "./dist/bin/cli.js",
-    "./config": "./dist/config.js",
+    "./bin/cli": "./dist/bin/cli.mjs",
+    "./config": "./dist/config.mjs",
     "./package.json": "./package.json"
   },
   "bin": {
-    "usts": "./dist/bin/cli/index.js"
+    "usts": "./dist/bin/cli.mjs"
   },
   "engines": {
     "node": ">=22.0.0",
     "bun": ">=1.2.20"
   },
   "dependencies": {
-    "rolldown": "^1.0.0-beta.50",
-    "zod": "^4.1.12"
+    "rolldown": "^1.0.0-beta.51",
+    "zod": "catalog:"
   },
   "devDependencies": {
     "tsdown": "catalog:"
