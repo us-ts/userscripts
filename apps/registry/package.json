@@ -18,7 +18,7 @@
     "zod": "catalog:"
   },
   "devDependencies": {
-    "@better-auth/cli": "^1.4.1",
+    "@better-auth/cli": "^1.4.3",
     "prisma": "^7.0.1"
   }
 }

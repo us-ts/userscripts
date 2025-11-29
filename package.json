@@ -7,9 +7,9 @@
       "packages/*"
     ],
     "catalog": {
-      "better-auth": "^1.4.1",
-      "tsdown": "^0.16.7",
-      "wrangler": "^4.50.0",
+      "better-auth": "^1.4.3",
+      "tsdown": "^0.16.8",
+      "wrangler": "^4.51.0",
       "zod": "^4.1.13"
     }
   },
@@ -17,14 +17,14 @@
     "format": "bunx biome format --write"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.3.7",
+    "@biomejs/biome": "2.3.8",
     "typescript": "^5.9.3"
   },
   "overrides": {
-    "c12": "^3.3.1",
+    "c12": "^3.3.2",
     "esbuild": "^0.25.12",
     "ofetch": "^1.5.1",
-    "rolldown": "1.0.0-beta.51",
-    "wrangler": "^4.50.0"
+    "rolldown": "1.0.0-beta.52",
+    "wrangler": "^4.51.0"
   }
 }
