@@ -7,9 +7,9 @@
       "packages/*"
     ],
     "catalog": {
-      "better-auth": "^1.4.3",
-      "tsdown": "^0.16.8",
-      "wrangler": "^4.51.0",
+      "better-auth": "^1.4.5",
+      "tsdown": "^0.17.0",
+      "wrangler": "^4.53.0",
       "zod": "^4.1.13"
     }
   },
@@ -22,9 +22,8 @@
   },
   "overrides": {
     "c12": "^3.3.2",
-    "esbuild": "^0.25.12",
     "ofetch": "^1.5.1",
-    "rolldown": "1.0.0-beta.52",
-    "wrangler": "^4.51.0"
+    "rolldown": "1.0.0-beta.53",
+    "wrangler": "^4.53.0"
   }
 }

@@ -10,15 +10,15 @@
   },
   "dependencies": {
     "@elysiajs/cors": "^1.4.0",
-    "@prisma/adapter-neon": "^7.0.1",
-    "@prisma/client": "^7.0.1",
+    "@prisma/adapter-neon": "^7.1.0",
+    "@prisma/client": "^7.1.0",
     "@vercel/blob": "^2.0.0",
     "better-auth": "catalog:",
-    "elysia": "^1.4.16",
+    "elysia": "^1.4.18",
     "zod": "catalog:"
   },
   "devDependencies": {
-    "@better-auth/cli": "^1.4.3",
-    "prisma": "^7.0.1"
+    "@better-auth/cli": "^1.4.5",
+    "prisma": "^7.1.0"
   }
 }
