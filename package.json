@@ -7,8 +7,8 @@
       "packages/*"
     ],
     "catalog": {
-      "better-auth": "^1.4.5",
-      "tsdown": "^0.17.0",
+      "better-auth": "^1.4.6",
+      "tsdown": "^0.17.2",
       "wrangler": "^4.53.0",
       "zod": "^4.1.13"
     }
@@ -22,7 +22,6 @@
   },
   "overrides": {
     "c12": "^3.3.2",
-    "ofetch": "^1.5.1",
     "rolldown": "1.0.0-beta.53",
     "wrangler": "^4.53.0"
   }
