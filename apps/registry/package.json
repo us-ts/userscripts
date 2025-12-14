@@ -14,11 +14,11 @@
     "@prisma/client": "^7.1.0",
     "@vercel/blob": "^2.0.0",
     "better-auth": "catalog:",
-    "elysia": "^1.4.18",
+    "elysia": "^1.4.19",
     "zod": "catalog:"
   },
   "devDependencies": {
-    "@better-auth/cli": "^1.4.6",
+    "@better-auth/cli": "catalog:",
     "prisma": "^7.1.0"
   }
 }

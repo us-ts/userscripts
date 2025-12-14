@@ -8,13 +8,13 @@
     "deploy": "bunx wrangler deploy"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^12.6.12",
-    "@astrojs/solid-js": "^5.1.3",
-    "@tailwindcss/vite": "^4.1.17",
-    "astro": "^5.16.4",
+    "@astrojs/cloudflare": "catalog:",
+    "@astrojs/solid-js": "catalog:",
+    "@tailwindcss/vite": "catalog:",
+    "astro": "catalog:",
     "better-auth": "catalog:",
-    "solid-js": "^1.9.10",
-    "tailwindcss": "^4.1.17"
+    "solid-js": "catalog:",
+    "tailwindcss": "catalog:"
   },
   "devDependencies": {
     "wrangler": "catalog:"

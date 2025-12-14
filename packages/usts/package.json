@@ -29,7 +29,7 @@
     "bun": ">=1.2.20"
   },
   "dependencies": {
-    "rolldown": "1.0.0-beta.53",
+    "rolldown": "catalog:",
     "zod": "catalog:"
   },
   "devDependencies": {
