@@ -1,7 +1,7 @@
 import { Elysia } from "elysia";
 
 import auth from "~/auth";
-import api from "~/api";
+import api from "~/routes/api";
 
 export default new Elysia()
   .onError(({ error }) => {

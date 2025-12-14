@@ -1,23 +1,22 @@
 import { betterAuth, type BetterAuthOptions } from "better-auth";
 
-import { prismaAdapter } from "better-auth/adapters/prisma";
+import { drizzleAdapter } from "better-auth/adapters/drizzle";
 
 import { apiKey, bearer, organization } from "better-auth/plugins";
 
-import { passkey } from "better-auth/plugins/passkey";
+import { passkey } from "@better-auth/passkey";
+
 import { oneTimeToken } from "better-auth/plugins/one-time-token";
 
-import { prisma } from "~/db";
+import { createAuthClient } from "better-auth/solid";
 
+import db from "~/db";
 import env from "~/env";
 
 export const auth = betterAuth({
   secret: env.BETTER_AUTH_SECRET,
-  baseURL: env.VERCEL_URL ?? env.REGISTRY_URL,
 
-  trustedOrigins: [env.CLIENT_URL],
-
-  database: prismaAdapter(prisma, { provider: "postgresql" }),
+  database: drizzleAdapter(db, { provider: "postgresql" }),
 
   socialProviders: {
     github: {
@@ -34,3 +33,5 @@ export const auth = betterAuth({
     oneTimeToken({ storeToken: "hashed" }),
   ],
 } as const satisfies BetterAuthOptions);
+
+export const authClient = createAuthClient();
