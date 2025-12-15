@@ -12,7 +12,7 @@
       "@better-auth/cli": "^1.4.7",
       "@better-auth/passkey": "^1.4.7",
       "@tailwindcss/vite": "^4.1.18",
-      "@typescript/native-preview": "7.0.0-dev.20251213.1",
+      "@typescript/native-preview": "7.0.0-dev.20251215.1",
       "astro": "alpha",
       "better-auth": "^1.4.7",
       "drizzle-orm": "^0.45.1",

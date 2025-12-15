@@ -2,8 +2,10 @@
 import Layout from "~/layouts/Layout.astro";
 
 export const prerender = true;
+
+const description = "Page Not Found";
 ---
 
-<Layout title="404">
-  <h1>Page Not Found</h1>
+<Layout title="404" {description}>
+  <h1>{description}</h1>
 </Layout>

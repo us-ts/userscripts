@@ -2,8 +2,10 @@
 import Layout from "~/layouts/Layout.astro";
 
 export const prerender = true;
+
+const description = "Internal Server Error";
 ---
 
-<Layout title="500">
-  <h1>Internal Server Error</h1>
+<Layout title="500" {description}>
+  <h1>{description}</h1>
 </Layout>

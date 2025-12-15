@@ -1,6 +1,6 @@
 import { Elysia } from "elysia";
 
-import auth from "~/auth/index";
+import auth from "~/router/auth/index";
 
 export default new Elysia({ prefix: "/userscripts" })
   .use(auth)
