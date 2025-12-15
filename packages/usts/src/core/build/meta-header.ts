@@ -13,7 +13,7 @@ function getHeaderLine(key: string, val: string | boolean): HeaderLine {
 
 function getHeaderLines(
   key: string,
-  val: string | string[] | boolean
+  val: string | string[] | boolean,
 ): HeaderLine[] {
   if (Array.isArray(val)) return val.map((v) => getHeaderLine(key, v));
   if (typeof val === "string") return [getHeaderLine(key, val)];
@@ -30,11 +30,11 @@ interface SerializeMetaHeaderResult {
 }
 
 export function serializeMetaHeader(
-  headerConfig: UserscriptMetaHeaderConfig
+  headerConfig: UserscriptMetaHeaderConfig,
 ): SerializeMetaHeaderResult {
   const headerConfigEntries = Object.entries(headerConfig);
   const headerLines = headerConfigEntries.flatMap(([key, val]) =>
-    getHeaderLines(key, val)
+    getHeaderLines(key, val),
   );
   const serializedHeaderLines = headerLines.join("\n");
   const serializedHeader =

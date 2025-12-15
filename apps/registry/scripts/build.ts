@@ -22,7 +22,7 @@ async function main() {
   // Make Node treat index.js as ESM inside the function mount
   Bun.write(
     path.join(funcDir, "package.json"),
-    JSON.stringify({ type: "module" }, null, 2)
+    JSON.stringify({ type: "module" }, null, 2),
   );
 
   // Function runtime config
@@ -36,8 +36,8 @@ async function main() {
         shouldAddHelpers: true,
       },
       null,
-      2
-    )
+      2,
+    ),
   );
 
   // Routes: static first, then all to the function
@@ -49,8 +49,8 @@ async function main() {
         routes: [{ handle: "filesystem" }, { src: "/(.*)", dest: "/index" }],
       },
       null,
-      2
-    )
+      2,
+    ),
   );
 
   console.log("✅ Build Output API ready at .vercel/output");

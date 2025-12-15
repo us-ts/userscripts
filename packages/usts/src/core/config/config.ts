@@ -29,7 +29,7 @@ async function search(root: string) {
 }
 
 export async function resolveConfigPath(
-  root: string
+  root: string,
 ): Promise<string | undefined> {
   const userConfigPath = await search(root);
   return userConfigPath;

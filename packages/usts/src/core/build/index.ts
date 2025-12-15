@@ -9,7 +9,7 @@ export default async function build(): Promise<void> {
 
   if (outDir === root.toString()) {
     throw new Error(
-      "The outDir cannot be the root folder. Please build to a different folder."
+      "The outDir cannot be the root folder. Please build to a different folder.",
     );
   }
 

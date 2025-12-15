@@ -1,8 +1,8 @@
 node_modules/
-generated/
 dist/
 
 .astro/
 .vercel/
+.wrangler/
 
 .env

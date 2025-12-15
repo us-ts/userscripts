@@ -1,8 +1,6 @@
 import type { JSX } from "solid-js";
 
-import { authClient } from "~/lib/auth";
-
-import { CLIENT_URL } from "astro:env/client";
+import { authClient } from "~/lib/auth/client";
 
 import Button from "~/components/ui/Button";
 
@@ -15,7 +13,7 @@ interface SignInButtonProps {
 const signInWith = (provider: OAuthProvider) => () => {
   return authClient.signIn.social({
     provider,
-    callbackURL: `${CLIENT_URL}/dashboard`,
+    callbackURL: `/dashboard`,
   });
 };
 

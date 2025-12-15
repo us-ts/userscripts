@@ -14,5 +14,5 @@ export default new Elysia({ prefix: "/userscripts" })
       const sessions = await authApi.listSessions({ headers });
       return { method: "POST", authData, sessions };
     },
-    { auth: true }
+    { auth: true },
   );

@@ -8,15 +8,13 @@ import { passkey } from "@better-auth/passkey";
 
 import { oneTimeToken } from "better-auth/plugins/one-time-token";
 
-import { createAuthClient } from "better-auth/solid";
-
 import db from "~/db";
 import env from "~/env";
 
 export const auth = betterAuth({
   secret: env.BETTER_AUTH_SECRET,
 
-  database: drizzleAdapter(db, { provider: "postgresql" }),
+  database: drizzleAdapter(db, { provider: "pg" }),
 
   socialProviders: {
     github: {
@@ -33,5 +31,3 @@ export const auth = betterAuth({
     oneTimeToken({ storeToken: "hashed" }),
   ],
 } as const satisfies BetterAuthOptions);
-
-export const authClient = createAuthClient();

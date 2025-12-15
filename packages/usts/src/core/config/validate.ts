@@ -25,7 +25,7 @@ function createRelativeSchema(root: string) {
 
 export function validateConfig(
   config: unknown | UserscriptConfig,
-  root: string
+  root: string,
 ): UserscriptConfig {
   return createRelativeSchema(root).parse(config);
 }
