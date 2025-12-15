@@ -8,8 +8,8 @@ import { passkey } from "@better-auth/passkey";
 
 import { oneTimeToken } from "better-auth/plugins/one-time-token";
 
-import db from "~/db";
-import env from "~/env";
+import db from "~/db/index";
+import env from "~/env/index";
 
 export const auth = betterAuth({
   secret: env.BETTER_AUTH_SECRET,
