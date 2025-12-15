@@ -7,15 +7,5 @@
 
   "compatibility_flags": ["nodejs_compat"],
 
-  "assets": {
-    "binding": "ASSETS",
-    "directory": "./dist"
-  },
-
-  "build": {
-    "command": "bun run build",
-    "cwd": "."
-  },
-
   "observability": { "logs": { "enabled": true } }
 }
