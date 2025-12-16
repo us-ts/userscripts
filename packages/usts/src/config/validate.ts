@@ -1,4 +1,8 @@
-import { UserscriptConfigSchema, type UserscriptConfig } from "~/schemas";
+import {
+  UserscriptConfigSchema,
+  type ResolvedUserscriptConfig,
+  type UserscriptConfig,
+} from "./schema";
 
 import * as path from "node:path";
 
@@ -26,6 +30,6 @@ function createRelativeSchema(root: string) {
 export function validateConfig(
   config: unknown | UserscriptConfig,
   root: string,
-): UserscriptConfig {
+): ResolvedUserscriptConfig {
   return createRelativeSchema(root).parse(config);
 }

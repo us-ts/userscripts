@@ -23,12 +23,6 @@
       }
     }
   },
-  "javascript": {
-    "formatter": {
-      "quoteStyle": "double",
-      "trailingCommas": "all"
-    }
-  },
   "assist": {
     "enabled": true,
     "actions": {

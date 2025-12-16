@@ -7,22 +7,22 @@
       "packages/*"
     ],
     "catalog": {
-      "@astrojs/cloudflare": "alpha",
+      "@astrojs/cloudflare": "13.0.0-alpha.2",
       "@astrojs/solid-js": "alpha",
       "@better-auth/cli": "^1.4.7",
       "@better-auth/passkey": "^1.4.7",
       "@tailwindcss/vite": "^4.1.18",
-      "@typescript/native-preview": "7.0.0-dev.20251215.1",
-      "astro": "alpha",
+      "@typescript/native-preview": "7.0.0-dev.20251216.1",
+      "astro": "6.0.0-alpha.2",
       "better-auth": "^1.4.7",
       "drizzle-orm": "^0.45.1",
       "elysia": "^1.4.19",
       "rolldown": "1.0.0-beta.53",
       "solid-js": "^1.9.10",
       "tailwindcss": "^4.1.18",
-      "tsdown": "^0.17.4",
-      "wrangler": "^4.54.0",
-      "zod": "^4.1.13"
+      "tsdown": "^0.18.0",
+      "wrangler": "^4.55.0",
+      "zod": "^4.2.1"
     }
   },
   "scripts": {

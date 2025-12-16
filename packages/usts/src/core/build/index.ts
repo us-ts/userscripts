@@ -1,6 +1,6 @@
 import { buildUserscript } from "./build";
 
-import { resolveConfig } from "../config";
+import { resolveConfig } from "~/config/resolve";
 
 export default async function build(): Promise<void> {
   const { userscriptConfig, root } = await resolveConfig();

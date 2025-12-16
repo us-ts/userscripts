@@ -6,6 +6,6 @@ export default defineConfig({
     "bin/cli": "src/bin/cli.ts",
   },
   exports: true,
-  unbundle: true,
-  dts: true,
+  hash: false,
+  dts: { tsgo: true },
 });

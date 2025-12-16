@@ -5,7 +5,7 @@ import { pathToFileURL } from "node:url";
 
 import { ZodError } from "zod";
 
-import type { UserscriptConfig } from "~/schemas";
+import type { ResolvedUserscriptConfig } from "./schema";
 
 import { validateConfig } from "./validate";
 
@@ -51,7 +51,7 @@ async function loadConfig(root: string): Promise<Record<string, any>> {
 }
 
 interface ResolveConfigResult {
-  userscriptConfig: UserscriptConfig;
+  userscriptConfig: ResolvedUserscriptConfig;
   root: string;
 }
 

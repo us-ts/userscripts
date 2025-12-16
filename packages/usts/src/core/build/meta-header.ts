@@ -1,4 +1,4 @@
-import type { UserscriptMetaHeaderConfig } from "~/schemas";
+import type { UserscriptMetaHeaderConfig } from "~/config/schema";
 
 const headerStart = "// ==UserScript==" as const;
 const headerEnd = "// ==/UserScript==" as const;

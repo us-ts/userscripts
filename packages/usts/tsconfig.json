@@ -7,8 +7,7 @@
     "moduleResolution": "bundler",
     "moduleDetection": "force",
 
-    "declarationDir": "./dist",
-    "outDir": "./dist",
+    "rootDir": "./src",
 
     "paths": { "~/*": ["./src/*"] },
 
@@ -26,5 +25,6 @@
     "strictNullChecks": true,
     "forceConsistentCasingInFileNames": true,
     "verbatimModuleSyntax": true
-  }
+  },
+  "include": ["src/**/*"]
 }
