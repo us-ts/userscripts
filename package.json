@@ -7,29 +7,31 @@
       "packages/*"
     ],
     "catalog": {
-      "@astrojs/cloudflare": "13.0.0-alpha.2",
+      "@astrojs/cloudflare": "alpha",
       "@astrojs/solid-js": "alpha",
       "@better-auth/cli": "^1.4.7",
       "@better-auth/passkey": "^1.4.7",
       "@tailwindcss/vite": "^4.1.18",
-      "@typescript/native-preview": "7.0.0-dev.20251216.1",
-      "astro": "6.0.0-alpha.2",
+      "@typescript/native-preview": "7.0.0-dev.20251218.3",
+      "astro": "alpha",
       "better-auth": "^1.4.7",
       "drizzle-orm": "^0.45.1",
       "elysia": "^1.4.19",
-      "rolldown": "1.0.0-beta.53",
+      "rolldown": "1.0.0-beta.55",
       "solid-js": "^1.9.10",
       "tailwindcss": "^4.1.18",
-      "tsdown": "^0.18.0",
-      "wrangler": "^4.55.0",
+      "tsdown": "^0.18.1",
+      "wrangler": "^4.56.0",
       "zod": "^4.2.1"
     }
   },
   "scripts": {
-    "format": "bunx biome format --write"
+    "lint": "bunx biome lint",
+    "format": "bunx biome format --write",
+    "build:packages": "bun run -F './packages/**' --elide-lines 0 build"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.3.9",
+    "@biomejs/biome": "2.3.10",
     "@typescript/native-preview": "catalog:"
   }
 }

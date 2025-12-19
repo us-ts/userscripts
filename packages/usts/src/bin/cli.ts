@@ -1,8 +1,4 @@
 #!/usr/bin/env bun
-"use strict";
-
-const minSupportedNodeVersion = 22;
-const supportedBunVersion = ">=1.2.20";
 
 async function main() {
   const bunVersion = process.versions.bun;
@@ -10,6 +6,7 @@ async function main() {
   if (bunVersion) {
     try {
       const { semver } = await import("bun");
+      const supportedBunVersion = ">=1.2.20";
       if (!semver.satisfies(bunVersion, supportedBunVersion)) {
         throw new Error("Unsupported Bun version. Please upgrade Bun.");
       }
@@ -18,7 +15,8 @@ async function main() {
       throw new Error("Unsupported Bun version. Please upgrade Bun.");
     }
   } else {
-    const version = parseInt(process.versions.node) || 0;
+    const version = parseInt(process.versions.node, 10) || 0;
+    const minSupportedNodeVersion = 22;
     if (version < minSupportedNodeVersion) {
       throw new Error("Unsupported Node version. Please upgrade Node.\n");
     }
@@ -26,7 +24,7 @@ async function main() {
 
   return import("../cli/index.js")
     .then(({ cli }) => cli(process.argv))
-    .catch((error) => {
+    .catch((error: unknown) => {
       console.error(error);
       process.exit(1);
     });

@@ -1,5 +1,5 @@
-import fs from "node:fs";
-import path from "node:path";
+import * as fs from "node:fs/promises";
+import * as path from "node:path";
 
 import { pathToFileURL } from "node:url";
 
@@ -22,7 +22,7 @@ async function search(root: string) {
   const paths = configPaths.map((p) => path.join(root, p));
 
   for (const file of paths) {
-    if (fs.existsSync(file)) {
+    if (await fs.exists(file)) {
       return file;
     }
   }
@@ -35,13 +35,13 @@ export async function resolveConfigPath(
   return userConfigPath;
 }
 
-async function loadConfig(root: string): Promise<Record<string, any>> {
+async function loadConfig(root: string): Promise<unknown> {
   const configPath = await resolveConfigPath(root);
   if (!configPath) return {};
 
   try {
     const config = await import(
-      pathToFileURL(configPath).toString() + "?t=" + Date.now()
+      `${pathToFileURL(configPath).toString()}?t=${Date.now()}`
     );
     return (config.default as unknown) ?? {};
   } catch (e) {

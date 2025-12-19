@@ -13,9 +13,6 @@
     "README.md",
     "LICENSE"
   ],
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
   "exports": {
     "./bin/cli": "./dist/bin/cli.mjs",
     "./config": "./dist/config.mjs",

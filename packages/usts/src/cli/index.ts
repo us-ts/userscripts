@@ -2,7 +2,7 @@ import { parseArgs } from "node:util";
 
 type CLICommand = "help" | "build";
 
-type Flags = {} & Record<any, never>;
+type Flags = {} & Record<string, never>;
 
 interface Args {
   values: Flags;

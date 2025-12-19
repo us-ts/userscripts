@@ -1,11 +1,16 @@
 import { defineConfig } from "tsdown";
 
-export default defineConfig({
-  entry: {
-    config: "src/config/index.ts",
-    "bin/cli": "src/bin/cli.ts",
+export default defineConfig([
+  {
+    entry: { config: "src/config/index.ts" },
+    exports: true,
+    hash: false,
+    dts: { tsgo: true },
   },
-  exports: true,
-  hash: false,
-  dts: { tsgo: true },
-});
+  {
+    entry: { "bin/cli": "src/bin/cli.ts" },
+    exports: true,
+    hash: false,
+    dts: false,
+  },
+]);
