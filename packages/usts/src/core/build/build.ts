@@ -41,5 +41,4 @@ async function buildUserscript(
   console.log("\n🎉 Build process complete!");
 }
 
-export { buildUserscript, buildUserscript as build };
-export default buildUserscript;
+export { buildUserscript };
