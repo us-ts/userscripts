@@ -108,7 +108,6 @@ type UserscriptConfig = z.input<typeof UserscriptConfigSchema>;
 type ResolvedUserscriptConfig = z.output<typeof UserscriptConfigSchema>;
 
 export {
-  UserscriptMetaHeaderConfigSchema,
   UserscriptConfigSchema,
   type UserscriptMetaHeaderConfig,
   type UserscriptConfig,

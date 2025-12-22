@@ -12,7 +12,7 @@
       "@better-auth/cli": "^1.4.7",
       "@better-auth/passkey": "^1.4.7",
       "@tailwindcss/vite": "^4.1.18",
-      "@typescript/native-preview": "7.0.0-dev.20251218.3",
+      "@typescript/native-preview": "7.0.0-dev.20251222.1",
       "astro": "alpha",
       "better-auth": "^1.4.7",
       "drizzle-orm": "^0.45.1",
@@ -20,7 +20,7 @@
       "rolldown": "1.0.0-beta.55",
       "solid-js": "^1.9.10",
       "tailwindcss": "^4.1.18",
-      "tsdown": "^0.18.1",
+      "tsdown": "^0.18.2",
       "wrangler": "^4.56.0",
       "zod": "^4.2.1"
     }

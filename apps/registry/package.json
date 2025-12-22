@@ -14,7 +14,6 @@
     "@better-auth/passkey": "catalog:",
     "@neondatabase/serverless": "^1.0.2",
     "@tailwindcss/vite": "catalog:",
-    "@vercel/blob": "^2.0.0",
     "astro": "catalog:",
     "better-auth": "catalog:",
     "drizzle-orm": "catalog:",

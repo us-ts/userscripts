@@ -8,8 +8,6 @@ const EnvSchema = z.object({
   DATABASE_URL: z.url(),
 });
 
-export type Env = z.infer<typeof EnvSchema>;
-
 const env = z.readonly(EnvSchema).parse(process.env);
 
 export default env;
