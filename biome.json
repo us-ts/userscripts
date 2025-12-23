@@ -14,15 +14,6 @@
     "indentStyle": "space",
     "lineEnding": "lf"
   },
-  "linter": {
-    "enabled": true,
-    "rules": {
-      "recommended": true,
-      "style": {
-        "noNonNullAssertion": "warn"
-      }
-    }
-  },
   "assist": {
     "enabled": true,
     "actions": {

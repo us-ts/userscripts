@@ -28,9 +28,7 @@ async function search(root: string) {
   }
 }
 
-async function resolveConfigPath(
-  root: string,
-): Promise<string | undefined> {
+async function resolveConfigPath(root: string): Promise<string | undefined> {
   const userConfigPath = await search(root);
   return userConfigPath;
 }
