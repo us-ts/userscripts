@@ -28,7 +28,7 @@
   "scripts": {
     "lint": "bunx biome lint",
     "format": "bunx biome format --write",
-    "build:packages": "bun run -F './packages/**' --elide-lines 0 build"
+    "build:cli": "bun run -F './packages/usts' --elide-lines 0 build"
   },
   "devDependencies": {
     "@biomejs/biome": "2.3.11",
