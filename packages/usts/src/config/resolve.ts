@@ -14,8 +14,6 @@ const configPaths = Object.freeze([
   "userscript.config.js",
   "userscript.config.mts",
   "userscript.config.mjs",
-  "userscript.config.cts",
-  "userscript.config.cjs",
 ]);
 
 async function search(root: string) {

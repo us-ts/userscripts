@@ -12,17 +12,17 @@
       "@better-auth/cli": "^1.4.10",
       "@better-auth/passkey": "^1.4.10",
       "@tailwindcss/vite": "^4.1.18",
-      "@typescript/native-preview": "7.0.0-dev.20260103.1",
+      "@typescript/native-preview": "7.0.0-dev.20260105.1",
       "astro": "alpha",
       "better-auth": "^1.4.10",
       "drizzle-orm": "^0.45.1",
-      "elysia": "^1.4.20",
+      "elysia": "^1.4.21",
       "rolldown": "1.0.0-beta.57",
       "solid-js": "^1.9.10",
       "tailwindcss": "^4.1.18",
-      "tsdown": "^0.18.3",
+      "tsdown": "^0.18.4",
       "wrangler": "^4.54.0",
-      "zod": "^4.3.4"
+      "zod": "^4.3.5"
     }
   },
   "scripts": {
