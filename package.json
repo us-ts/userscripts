@@ -7,27 +7,32 @@
       "packages/*"
     ],
     "catalog": {
-      "@astrojs/cloudflare": "alpha",
+      "@astrojs/cloudflare": "13.0.0-alpha.4",
       "@astrojs/solid-js": "alpha",
       "@better-auth/cli": "^1.4.10",
       "@better-auth/passkey": "^1.4.10",
       "@tailwindcss/vite": "^4.1.18",
-      "@typescript/native-preview": "7.0.0-dev.20260105.1",
-      "astro": "alpha",
+      "@typescript/native-preview": "7.0.0-dev.20260109.1",
+      "astro": "6.0.0-alpha.5",
       "better-auth": "^1.4.10",
       "drizzle-orm": "^0.45.1",
       "elysia": "^1.4.21",
-      "rolldown": "1.0.0-beta.57",
+      "rolldown": "1.0.0-beta.59",
       "solid-js": "^1.9.10",
       "tailwindcss": "^4.1.18",
-      "tsdown": "^0.18.4",
-      "wrangler": "^4.54.0",
+      "tsdown": "^0.19.0",
+      "wrangler": "^4.58.0",
       "zod": "^4.3.5"
     }
+  },
+  "overrides": {
+    "sharp": "latest",
+    "wrangler": "latest"
   },
   "scripts": {
     "lint": "bunx biome lint",
     "format": "bunx biome format --write",
+    "build:app": "bun run -F './apps/registry' --elide-lines 0 build",
     "build:cli": "bun run -F './packages/usts' --elide-lines 0 build"
   },
   "devDependencies": {
