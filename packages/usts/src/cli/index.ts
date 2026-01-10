@@ -42,7 +42,7 @@ async function runCommand(cmd: CLICommand) {
   }
 }
 
-export async function cli(argv: string[]) {
+export async function cli(argv: string[]): Promise<void> {
   const parsedArgs = parseArgs({ args: argv, allowPositionals: true });
   const cmd = resolveCommand(parsedArgs);
   await runCommand(cmd);

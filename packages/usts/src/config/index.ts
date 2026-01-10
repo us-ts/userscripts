@@ -1,5 +1,5 @@
 import type { UserscriptConfig } from "./schema";
 
-export function defineConfig(config: UserscriptConfig) {
+export function defineConfig(config: UserscriptConfig): UserscriptConfig {
   return config;
 }

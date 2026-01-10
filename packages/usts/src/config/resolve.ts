@@ -3,7 +3,7 @@ import * as path from "node:path";
 
 import { pathToFileURL } from "node:url";
 
-import { ZodError } from "zod";
+import * as z from "zod";
 
 import type { ResolvedUserscriptConfig } from "./schema";
 
@@ -58,7 +58,7 @@ export async function resolveConfig(): Promise<ResolveConfigResult> {
     const userscriptConfig = validateConfig(userConfig, root);
     return { userscriptConfig, root };
   } catch (e) {
-    if (e instanceof ZodError) {
+    if (e instanceof z.ZodError) {
       console.error(e);
     }
     throw e;

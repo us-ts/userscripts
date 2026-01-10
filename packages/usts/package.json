@@ -14,6 +14,7 @@
     "LICENSE"
   ],
   "exports": {
+    ".": "./dist/index.mjs",
     "./bin/cli": "./dist/bin/cli.mjs",
     "./config": "./dist/config.mjs",
     "./package.json": "./package.json"
