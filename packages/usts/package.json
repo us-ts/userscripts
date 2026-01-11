@@ -8,6 +8,11 @@
     "build": "bunx --bun tsdown",
     "npm:publish": "bun run build && bun publish"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/us-ts/userscripts.git",
+    "directory": "packages/usts"
+  },
   "files": [
     "dist/**/*",
     "README.md",

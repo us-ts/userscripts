@@ -1,7 +1,7 @@
-import { rolldown } from "rolldown";
-
-import * as path from "node:path";
 import * as fs from "node:fs/promises";
+import * as path from "node:path";
+
+import { rolldown } from "rolldown";
 
 import type { ResolvedUserscriptConfig } from "~/config/schema";
 

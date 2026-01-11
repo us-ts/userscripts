@@ -1,3 +1,4 @@
+import type { RolldownPluginOption } from "rolldown";
 import * as z from "zod";
 
 const UserscriptMetaHeaderConfigSchema: z.ZodObject<{
@@ -125,11 +126,15 @@ const UserscriptConfigSchema: z.ZodObject<{
    * {@link https://violentmonkey.github.io/api/metadata-block Metadata Block}
    */
   header: typeof UserscriptMetaHeaderConfigSchema;
+  plugins: z.ZodOptional<
+    z.ZodCustom<RolldownPluginOption, RolldownPluginOption>
+  >;
 }> = z.object({
   entryPoint: z.string().default("src/index.ts"),
   outDir: z.string().default("dist"),
   clean: z.boolean().default(true),
   header: UserscriptMetaHeaderConfigSchema,
+  plugins: z.custom<RolldownPluginOption>().optional(),
 });
 
 type UserscriptConfig = z.input<typeof UserscriptConfigSchema>;

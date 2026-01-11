@@ -1,10 +1,7 @@
-import { betterAuth, type BetterAuthOptions } from "better-auth";
-
-import { drizzleAdapter } from "better-auth/adapters/drizzle";
-
-import { apiKey, bearer, organization } from "better-auth/plugins";
-
 import { passkey } from "@better-auth/passkey";
+import { type BetterAuthOptions, betterAuth } from "better-auth";
+import { drizzleAdapter } from "better-auth/adapters/drizzle";
+import { apiKey, bearer, organization } from "better-auth/plugins";
 
 import { oneTimeToken } from "better-auth/plugins/one-time-token";
 

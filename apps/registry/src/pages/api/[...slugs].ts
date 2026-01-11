@@ -1,5 +1,5 @@
-import { Elysia } from "elysia";
 import type { APIRoute } from "astro";
+import { Elysia } from "elysia";
 
 import router from "~/router/index";
 

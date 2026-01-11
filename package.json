@@ -30,8 +30,8 @@
     "wrangler": "latest"
   },
   "scripts": {
-    "lint": "bunx biome lint",
-    "format": "bunx biome format --write",
+    "lint": "biome lint",
+    "format": "biome check --write",
     "build:app": "bun run -F './apps/registry' --elide-lines 0 build",
     "build:cli": "bun run -F './packages/usts' --elide-lines 0 build"
   },

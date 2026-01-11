@@ -1,8 +1,6 @@
 import type { JSX } from "solid-js";
-
-import { authClient } from "~/lib/auth/client";
-
 import Button from "~/components/ui/Button";
+import { authClient } from "~/lib/auth/client";
 
 type OAuthProvider = "github" & {};
 
