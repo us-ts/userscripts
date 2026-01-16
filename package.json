@@ -32,8 +32,8 @@
   "scripts": {
     "lint": "biome lint",
     "format": "biome check --write",
-    "build:app": "bun run -F './apps/registry' --elide-lines 0 build",
-    "build:cli": "bun run -F './packages/usts' --elide-lines 0 build"
+    "build:app": "bun run -F './apps/registry' build",
+    "build:cli": "bun run -F './packages/usts' build"
   },
   "devDependencies": {
     "@biomejs/biome": "2.3.11",
