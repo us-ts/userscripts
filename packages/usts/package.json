@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build": "bunx --bun tsdown",
-    "npm:publish": "bun run build && bun publish"
+    "prepublishOnly": "bun run build"
   },
   "repository": {
     "type": "git",
