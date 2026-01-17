@@ -7,33 +7,29 @@
       "packages/*"
     ],
     "catalog": {
-      "@astrojs/cloudflare": "13.0.0-alpha.4",
-      "@astrojs/solid-js": "alpha",
-      "@better-auth/cli": "^1.4.10",
-      "@better-auth/passkey": "^1.4.10",
+      "@astrojs/cloudflare": "beta",
+      "@astrojs/solid-js": "beta",
+      "@better-auth/cli": "^1.4.14",
+      "@better-auth/passkey": "^1.4.14",
       "@tailwindcss/vite": "^4.1.18",
       "@typescript/native-preview": "7.0.0-dev.20260109.1",
-      "astro": "6.0.0-alpha.5",
-      "better-auth": "^1.4.10",
+      "astro": "beta",
+      "better-auth": "^1.4.14",
       "drizzle-orm": "^0.45.1",
-      "elysia": "^1.4.21",
+      "elysia": "^1.4.22",
       "rolldown": "1.0.0-beta.59",
       "solid-js": "^1.9.10",
       "tailwindcss": "^4.1.18",
       "tsdown": "^0.19.0",
-      "wrangler": "^4.58.0",
+      "wrangler": "^4.59.2",
       "zod": "^4.3.5"
     }
   },
-  "overrides": {
-    "sharp": "latest",
-    "wrangler": "latest"
-  },
   "scripts": {
     "lint": "biome lint",
-    "format": "biome check --write",
-    "build:app": "bun run -F './apps/registry' --elide-lines 0 build",
-    "build:cli": "bun run -F './packages/usts' --elide-lines 0 build"
+    "format": "biome check --write --linter-enabled=false",
+    "build:app": "bun run -F './apps/registry' build",
+    "build:cli": "bun run -F './packages/usts' build"
   },
   "devDependencies": {
     "@biomejs/biome": "2.3.11",

@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "ba:gen": "bunx --env=.env @better-auth/cli generate --config src/lib/auth/index.ts --output src/db/auth-schema.ts",
-    "build": "bunx astro build",
-    "dev": "bunx astro dev",
-    "deploy": "bunx wrangler deploy"
+    "build": "astro build",
+    "dev": "astro dev",
+    "deploy": "wrangler deploy"
   },
   "dependencies": {
     "@astrojs/cloudflare": "catalog:",
