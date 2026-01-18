@@ -11,10 +11,11 @@ const USERSCRIPT_OUTPUT_FILE_NAME = "index.user.js";
 
 async function buildUserscript(
   config: ResolvedUserscriptConfig,
-): Promise<void> {
+  options?: { write?: boolean },
+): Promise<string> {
   console.log("\n⚒️ Building userscript");
 
-  const header = serializeMetaHeader(config.header).serializedHeader;
+  const header = serializeMetaHeader(config.header);
 
   const bundle = await rolldown({ input: config.entryPoint, tsconfig: true });
   const result = await bundle.generate({
@@ -28,7 +29,11 @@ async function buildUserscript(
   }
 
   const bundledCode = result.output[0].code;
-  const fullCode = `${header}\n\n${bundledCode}` as const;
+  const fullCode = `${header}\n\n${bundledCode}`;
+
+  if (!options?.write) {
+    return fullCode;
+  }
 
   const outDir = config.outDir;
   if (config.clean) {
@@ -39,6 +44,8 @@ async function buildUserscript(
   const outFile = path.join(outDir, USERSCRIPT_OUTPUT_FILE_NAME);
   await fs.writeFile(outFile, fullCode, "utf-8");
   console.log("\n🎉 Build process complete!");
+
+  return fullCode;
 }
 
 export { buildUserscript };

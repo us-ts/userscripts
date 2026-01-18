@@ -6,7 +6,8 @@
   "license": "MIT",
   "scripts": {
     "build": "bunx --bun tsdown",
-    "prepublishOnly": "bun run build"
+    "prepublishOnly": "bun run build",
+    "test": "bun test"
   },
   "repository": {
     "type": "git",
