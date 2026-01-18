@@ -9,11 +9,8 @@
     "deploy": "wrangler deploy"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "catalog:",
-    "@astrojs/solid-js": "catalog:",
     "@better-auth/passkey": "catalog:",
     "@neondatabase/serverless": "^1.0.2",
-    "@tailwindcss/vite": "catalog:",
     "astro": "catalog:",
     "better-auth": "catalog:",
     "drizzle-orm": "catalog:",
@@ -23,7 +20,10 @@
     "zod": "catalog:"
   },
   "devDependencies": {
+    "@astrojs/cloudflare": "catalog:",
+    "@astrojs/solid-js": "catalog:",
     "@better-auth/cli": "catalog:",
+    "@tailwindcss/vite": "catalog:",
     "wrangler": "catalog:"
   }
 }
