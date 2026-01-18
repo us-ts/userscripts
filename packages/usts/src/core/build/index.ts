@@ -12,5 +12,5 @@ export default async function build(): Promise<void> {
     );
   }
 
-  await buildUserscript(userscriptConfig);
+  await buildUserscript(userscriptConfig, { write: true });
 }

@@ -28,3 +28,6 @@ jobs:
 
       - name: Build CLI (test)
         run: bun run build:cli
+
+      - name: Run tests
+        run: bun run test

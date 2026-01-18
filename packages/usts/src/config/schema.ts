@@ -61,9 +61,7 @@ const UserscriptMetaHeaderConfigSchema: z.ZodObject<{
     >
   >;
   require: z.ZodOptional<z.ZodArray<z.ZodString>>;
-  resource: z.ZodOptional<
-    z.ZodUnion<readonly [z.ZodString, z.ZodArray<z.ZodString>]>
-  >;
+  resource: z.ZodOptional<z.ZodRecord<z.ZodString, z.ZodString>>;
   grant: z.ZodOptional<z.ZodArray<z.ZodString>>;
   downloadURL: z.ZodOptional<z.ZodString>;
   updateURL: z.ZodOptional<z.ZodString>;
@@ -88,7 +86,7 @@ const UserscriptMetaHeaderConfigSchema: z.ZodObject<{
   ),
 
   require: z.optional(z.array(z.string())),
-  resource: z.optional(z.union([z.string(), z.array(z.string())])),
+  resource: z.optional(z.record(z.string(), z.string())),
 
   grant: z.optional(z.array(z.string())),
 
