@@ -1,12 +1,28 @@
 // Bun Snapshot v1, https://bun.sh/docs/test/snapshots
 
-exports[`Basic userscript Correctly bundles a basic userscript 1`] = `
+exports[`Basic userscript correctly bundles a basic userscript 1`] = `
 "// ==UserScript==
 // @name             Userscript name
 // @namespace        fixtures
 // @match            https://example.com/*
 // @version          1.0.0
 // @description      Userscript description
+// ==/UserScript==
+
+(function() {
+	console.log("Hello world!");
+})();
+"
+`;
+
+exports[`Basic userscript correctly bundles a basic userscript with more options 1`] = `
+"// ==UserScript==
+// @name             Userscript name
+// @namespace        fixtures
+// @match            https://example.com/*
+// @version          1.0.0
+// @description      Userscript description
+// @resource         myStyle  https://example.com/myStyle.css
 // ==/UserScript==
 
 (function() {
