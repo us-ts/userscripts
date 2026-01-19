@@ -12,8 +12,6 @@ async function buildUserscript(
   config: ResolvedUserscriptConfig,
   options?: { write?: boolean },
 ): Promise<string> {
-  console.log("\n⚒️ Building userscript");
-
   const header = serializeMetaHeader(config.header);
 
   const outDir = config.outDir;
