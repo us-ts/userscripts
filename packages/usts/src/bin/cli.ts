@@ -1,6 +1,6 @@
 #!/usr/bin/env bun
 
-async function main() {
+async function main(): Promise<void> {
   const bunVersion = process.versions.bun;
 
   if (bunVersion) {

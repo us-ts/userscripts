@@ -7,34 +7,32 @@
       "packages/*"
     ],
     "catalog": {
-      "@astrojs/cloudflare": "beta",
-      "@astrojs/solid-js": "beta",
-      "@better-auth/cli": "^1.4.15",
-      "@better-auth/passkey": "^1.4.15",
+      "@astrojs/cloudflare": "13.0.0-beta.1",
+      "@astrojs/solid-js": "6.0.0-beta.2",
+      "@better-auth/cli": "^1.4.17",
+      "@better-auth/passkey": "^1.4.17",
       "@tailwindcss/vite": "^4.1.18",
-      "@typescript/native-preview": "7.0.0-dev.20260118.1",
-      "astro": "beta",
-      "better-auth": "^1.4.15",
+      "astro": "6.0.0-beta.3",
+      "better-auth": "^1.4.17",
       "drizzle-orm": "^0.45.1",
       "elysia": "^1.4.22",
-      "rolldown": "1.0.0-beta.59",
-      "solid-js": "^1.9.10",
+      "rolldown": "1.0.0-rc.1",
+      "solid-js": "^1.9.11",
       "tailwindcss": "^4.1.18",
-      "tsdown": "^0.19.0",
+      "tsdown": "^0.20.1",
       "wrangler": "^4.59.2",
-      "zod": "^4.3.5"
+      "zod": "^4.3.6"
     }
   },
   "scripts": {
     "lint": "biome lint",
     "format": "biome check --write --linter-enabled=false",
-    "build:app": "bun run -F './apps/registry' build",
-    "build:cli": "bun run -F './packages/usts' build",
-    "test": "bun run -F './packages/usts' test"
+    "build:app": "bun run --cwd ./apps/registry build",
+    "build:cli": "bun run --cwd ./packages/usts build",
+    "test": "bun run --cwd ./packages/usts test"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.3.11",
-    "@typescript/native-preview": "catalog:"
+    "@biomejs/biome": "2.3.12"
   },
   "overrides": {
     "esbuild": "^0.27.2"

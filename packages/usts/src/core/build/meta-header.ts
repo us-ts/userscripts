@@ -28,14 +28,13 @@ export function serializeMetaHeader(
   headerConfig: UserscriptMetaHeaderConfig,
 ): string {
   const headerConfigEntries = Object.entries(headerConfig);
-  const headerLines = headerConfigEntries.flatMap(([kwy, val]) =>
-    getHeaderLines(kwy, val),
+  const headerLines = headerConfigEntries.flatMap(([key, val]) =>
+    getHeaderLines(key, val),
   );
 
   const headerStart = "// ==UserScript==";
   const headerEnd = "// ==/UserScript==";
   const serializedHeaderLines = headerLines.join("\n");
-  const serializedHeader =
-    `${headerStart}\n${serializedHeaderLines}\n${headerEnd}` as const;
+  const serializedHeader = `${headerStart}\n${serializedHeaderLines}\n${headerEnd}`;
   return serializedHeader;
 }

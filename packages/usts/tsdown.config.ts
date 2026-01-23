@@ -1,30 +1,13 @@
-import { defineConfig, type UserConfig } from "tsdown";
+import { defineConfig } from "tsdown";
 
-function defineEntryPoint({
-  entry,
-  dts = true,
-}: {
-  entry: Record<string, string>;
-  dts?: boolean;
-}) {
-  return {
-    entry,
-    exports: true,
-    hash: false,
-    outputOptions: { minify: "dce-only" },
-    dts,
-  } satisfies UserConfig;
-}
-
-export default defineConfig([
-  defineEntryPoint({
-    entry: {
-      index: "src/config/index.ts",
-      config: "src/config/index.ts",
-    },
-  }),
-  defineEntryPoint({
-    entry: { "bin/cli": "src/bin/cli.ts" },
-    dts: false,
-  }),
-]);
+export default defineConfig({
+  entry: {
+    core: "src/core/index.ts",
+    config: "src/config/index.ts",
+    "bin/cli": "src/bin/cli.ts",
+  },
+  exports: true,
+  hash: false,
+  outputOptions: { minify: "dce-only", minifyInternalExports: false },
+  dts: true,
+});

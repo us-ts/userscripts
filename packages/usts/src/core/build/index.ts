@@ -1,16 +1,40 @@
-import { resolveConfig } from "~/config/resolve";
-import { buildUserscript } from "./build";
+import * as path from "node:path";
 
-export default async function build(): Promise<void> {
-  const { userscriptConfig, root } = await resolveConfig();
+import * as rolldown from "rolldown";
 
-  const outDir = userscriptConfig.outDir;
+import type { ResolvedUserscriptConfig } from "~/config/schema";
 
-  if (outDir === root || root.includes(outDir)) {
-    throw new Error(
-      "The outDir cannot be the root folder. Please build to a different folder.",
-    );
+import { serializeMetaHeader } from "./meta-header";
+
+async function buildUserscript(
+  config: ResolvedUserscriptConfig,
+  options?: { write?: boolean },
+): Promise<string> {
+  const header = serializeMetaHeader(config.header);
+
+  const USERSCRIPT_OUTPUT_FILE_NAME = "index.user.js";
+  const outFile = path.join(config.outDir, USERSCRIPT_OUTPUT_FILE_NAME);
+
+  const result = await rolldown.build({
+    input: config.entryPoint,
+    tsconfig: true,
+    plugins: [config.plugins],
+    output: {
+      format: "iife",
+      sourcemap: false,
+      minify: "dce-only",
+      postBanner: `${header}\n`,
+      cleanDir: config.clean,
+      file: outFile,
+    },
+    write: options?.write ?? false,
+  });
+
+  if (result.output.length !== 1) {
+    throw new Error(`❌ Unexpected userscript build output`);
   }
 
-  await buildUserscript(userscriptConfig, { write: true });
+  return result.output[0].code;
 }
+
+export { buildUserscript };
