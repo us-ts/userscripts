@@ -1,6 +1,6 @@
 {
   "name": "usts",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "type": "module",
   "author": "GameRoMan",
   "license": "MIT",
@@ -16,8 +16,7 @@
   },
   "files": [
     "dist/**/*",
-    "README.md",
-    "LICENSE"
+    "README.md"
   ],
   "exports": {
     "./bin/cli": "./dist/bin/cli.mjs",
