@@ -8,7 +8,7 @@ import { serializeMetaHeader } from "./meta-header";
 
 async function buildUserscript(
   config: ResolvedUserscriptConfig,
-  options?: { write?: boolean },
+  options?: { write?: boolean; watch?: boolean },
 ): Promise<string> {
   const header = serializeMetaHeader(config.header);
 
