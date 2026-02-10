@@ -29,6 +29,7 @@
     "format": "biome check --write --linter-enabled=false",
     "build:app": "bun run --cwd ./apps/registry build",
     "build:cli": "bun run --cwd ./packages/usts build",
+    "build": "bun run build:cli",
     "test": "bun run --cwd ./packages/usts test"
   },
   "devDependencies": {

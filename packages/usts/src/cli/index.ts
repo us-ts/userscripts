@@ -2,7 +2,7 @@ import { parseArgs } from "node:util";
 
 type CLICommand = "help" | "build";
 
-type Flags = {} & Record<string, never>;
+type Flags = { watch: boolean };
 
 interface Args {
   values: Flags;
@@ -10,7 +10,17 @@ interface Args {
 }
 
 async function printHelp() {
-  console.log("Run `usts build` to build a userscript");
+  console.log(`
+usts build - build a userscript
+usts build --watch - build userscript in watch mode
+`);
+}
+
+function isSupportedCommand<T extends CLICommand>(
+  supportedCommands: T[],
+  cmd: string,
+): cmd is T {
+  return new Set<string>(supportedCommands).has(cmd);
 }
 
 function resolveCommand(parsedArgs: Args): CLICommand {
@@ -20,15 +30,14 @@ function resolveCommand(parsedArgs: Args): CLICommand {
     return "help";
   }
 
-  const supportedCommands = new Set(["build"]);
-  if (supportedCommands.has(cmd)) {
-    return cmd as CLICommand;
+  if (isSupportedCommand(["build"], cmd)) {
+    return cmd;
   }
 
   return "help";
 }
 
-async function runCommand(cmd: CLICommand) {
+async function runCommand(cmd: CLICommand, flags: Flags) {
   switch (cmd) {
     case "help": {
       await printHelp();
@@ -36,14 +45,18 @@ async function runCommand(cmd: CLICommand) {
     }
     case "build": {
       const { build } = await import("./build/index.js");
-      await build();
+      await build({ watch: flags.watch });
       return;
     }
   }
 }
 
 export async function cli(argv: string[]): Promise<void> {
-  const parsedArgs = parseArgs({ args: argv, allowPositionals: true });
+  const parsedArgs = parseArgs({
+    args: argv,
+    allowPositionals: true,
+    options: { watch: { type: "boolean", default: false } },
+  });
   const cmd = resolveCommand(parsedArgs);
-  await runCommand(cmd);
+  await runCommand(cmd, parsedArgs.values);
 }
