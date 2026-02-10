@@ -6,7 +6,7 @@ async function main(): Promise<void> {
   if (bunVersion) {
     try {
       const { semver } = await import("bun");
-      const supportedBunVersion = ">=1.2.20";
+      const supportedBunVersion = ">=1.3.0";
       if (!semver.satisfies(bunVersion, supportedBunVersion)) {
         throw new Error("Unsupported Bun version. Please upgrade Bun.");
       }
@@ -16,7 +16,7 @@ async function main(): Promise<void> {
     }
   } else {
     const version = parseInt(process.versions.node, 10) || 0;
-    const minSupportedNodeVersion = 22;
+    const minSupportedNodeVersion = 24;
     if (version < minSupportedNodeVersion) {
       throw new Error("Unsupported Node version. Please upgrade Node.\n");
     }

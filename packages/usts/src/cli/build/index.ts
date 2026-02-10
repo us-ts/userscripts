@@ -1,7 +1,8 @@
 import { resolveConfig } from "~/config/resolve";
 import { buildUserscript } from "~/core/build";
+import { watchUserscript } from "~/core/build/watch";
 
-async function build(): Promise<void> {
+async function build(options: { watch?: boolean }): Promise<void> {
   const { userscriptConfig, root } = await resolveConfig();
 
   const outDir = userscriptConfig.outDir;
@@ -12,7 +13,13 @@ async function build(): Promise<void> {
     );
   }
 
-  await buildUserscript(userscriptConfig, { write: true });
+  if (!options.watch) {
+    await buildUserscript(userscriptConfig, { write: true });
+  }
+
+  if (options.watch) {
+    await watchUserscript(userscriptConfig);
+  }
 }
 
 export { build };
