@@ -18,7 +18,7 @@ async function build(options: { watch?: boolean }): Promise<void> {
   }
 
   if (options.watch) {
-    watchUserscript(userscriptConfig);
+    await watchUserscript(userscriptConfig);
   }
 }
 

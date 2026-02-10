@@ -8,7 +8,8 @@ async function buildUserscript(
   config: ResolvedUserscriptConfig,
   options?: { write?: boolean },
 ): Promise<string> {
-  const result = await rolldown.build(resolveOptions(config, options));
+  const buildOptions = resolveOptions(config, options);
+  const result = await rolldown.build(buildOptions);
 
   if (result.output.length !== 1) {
     throw new Error(`❌ Unexpected userscript build output`);
