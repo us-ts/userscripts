@@ -10,7 +10,7 @@ async function watchUserscript(
   options?: { port?: number },
 ): Promise<void> {
   const USERSCRIPT_OUTPUT_FILE_NAME = "index.user.js";
-  const watchOptions = resolveOptions(config);
+  const watchOptions = resolveOptions(config, { dev: true });
   rolldown.watch(watchOptions);
   await serve({
     port: options?.port ?? 3000,
