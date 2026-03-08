@@ -6,7 +6,14 @@ export default defineConfig({
     config: "src/config/index.ts",
     "bin/cli": "src/bin/cli.ts",
   },
-  exports: true,
+  copy: { from: "src/types/*.d.ts", to: "dist" },
+  exports: {
+    enabled: true,
+    customExports(pkg) {
+      pkg["./types"] = "./virtual.d.ts";
+      return pkg;
+    },
+  },
   hash: false,
   outputOptions: { minify: "dce-only", minifyInternalExports: false },
   dts: true,
