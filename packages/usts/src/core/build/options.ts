@@ -58,6 +58,9 @@ export function resolveOptions(
     transform: {
       define: { "process.env.NODE_ENV": `"${process.env.NODE_ENV}"` },
     },
+    experimental: {
+      attachDebugInfo: "none",
+    },
     write: options?.write ?? false,
   };
 }
