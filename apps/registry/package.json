@@ -9,10 +9,8 @@
   },
   "dependencies": {
     "astro": "catalog:",
-    "drizzle-orm": "catalog:",
     "solid-js": "catalog:",
-    "tailwindcss": "catalog:",
-    "zod": "catalog:"
+    "tailwindcss": "catalog:"
   },
   "devDependencies": {
     "@astrojs/cloudflare": "catalog:",
