@@ -3,26 +3,18 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "ba:gen": "bunx --env=.env @better-auth/cli generate --config src/lib/auth/index.ts --output src/db/auth-schema.ts",
     "build": "astro build",
     "dev": "astro dev",
     "deploy": "wrangler deploy"
   },
   "dependencies": {
-    "@better-auth/passkey": "catalog:",
-    "@neondatabase/serverless": "^1.0.2",
     "astro": "catalog:",
-    "better-auth": "catalog:",
-    "drizzle-orm": "catalog:",
-    "elysia": "catalog:",
     "solid-js": "catalog:",
-    "tailwindcss": "catalog:",
-    "zod": "catalog:"
+    "tailwindcss": "catalog:"
   },
   "devDependencies": {
     "@astrojs/cloudflare": "catalog:",
     "@astrojs/solid-js": "catalog:",
-    "@better-auth/cli": "catalog:",
     "@tailwindcss/vite": "catalog:",
     "wrangler": "catalog:"
   }

@@ -1,28 +1,8 @@
 import * as path from "node:path";
-import type { InputOptions, OutputOptions, Plugin } from "rolldown";
+import type { InputOptions, OutputOptions } from "rolldown";
 import type { ResolvedUserscriptConfig } from "~/config/schema";
 import { serializeMetaHeader } from "./meta-header";
-
-function userscriptPlugin(options?: { dev?: boolean }) {
-  const id = "usts:runtime";
-  const resolvedId = `\0${id}`;
-  return {
-    name: "userscript-plugin",
-    resolveId(source) {
-      if (source === id) {
-        return resolvedId;
-      }
-      return null;
-    },
-    load(id) {
-      if (id === resolvedId) {
-        return `const IS_DEV = ${options?.dev ?? false};
-        export { IS_DEV };`;
-      }
-      return null;
-    },
-  } satisfies Plugin;
-}
+import { userscriptPlugin } from "./plugin";
 
 interface ResolvedOutputOptions extends OutputOptions {
   readonly file: string;
@@ -57,6 +37,9 @@ export function resolveOptions(
     },
     transform: {
       define: { "process.env.NODE_ENV": `"${process.env.NODE_ENV}"` },
+    },
+    experimental: {
+      attachDebugInfo: "none",
     },
     write: options?.write ?? false,
   };
