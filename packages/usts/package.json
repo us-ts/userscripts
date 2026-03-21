@@ -2,7 +2,7 @@
   "name": "usts",
   "version": "0.0.6",
   "type": "module",
-  "author": "GameRoMan",
+  "author": "gameroman",
   "license": "MIT",
   "scripts": {
     "build": "bunx --bun tsdown",
@@ -15,8 +15,7 @@
     "directory": "packages/usts"
   },
   "files": [
-    "dist/**/*",
-    "README.md"
+    "dist"
   ],
   "exports": {
     "./bin/cli": "./dist/bin/cli.mjs",
