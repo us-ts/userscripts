@@ -10,7 +10,7 @@ export default defineConfig({
   exports: {
     enabled: true,
     customExports(pkg) {
-      pkg["./types"] = "./virtual.d.ts";
+      pkg["./types"] = "./dist/virtual.d.ts";
       return pkg;
     },
   },
