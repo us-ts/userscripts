@@ -1,4 +1,4 @@
-import type { UserscriptMetaHeaderConfig } from "~/config/schema";
+import type { UserscriptMetaHeaderConfig } from "#config/schema";
 
 function getHeaderLine(
   key: string,

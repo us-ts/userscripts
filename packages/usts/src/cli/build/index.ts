@@ -1,6 +1,6 @@
-import { resolveConfig } from "~/config/resolve";
-import { buildUserscript } from "~/core/build";
-import { watchUserscript } from "~/core/build/watch";
+import { resolveConfig } from "#config/resolve";
+import { buildUserscript } from "#core/build/index";
+import { watchUserscript } from "#core/build/watch";
 
 async function build(options: { watch?: boolean }): Promise<void> {
   const { userscriptConfig, root } = await resolveConfig();

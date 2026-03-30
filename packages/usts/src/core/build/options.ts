@@ -1,6 +1,6 @@
 import * as path from "node:path";
 import type { InputOptions, OutputOptions } from "rolldown";
-import type { ResolvedUserscriptConfig } from "~/config/schema";
+import type { ResolvedUserscriptConfig } from "#config/schema";
 import { serializeMetaHeader } from "./meta-header";
 import { userscriptPlugin } from "./plugin";
 
