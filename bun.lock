@@ -45,9 +45,7 @@
     "@babel/parser": "8.0.0-rc.3",
     "@babel/traverse": "8.0.0-rc.3",
     "@babel/types": "8.0.0-rc.3",
-    "@cloudflare/vite-plugin": "latest",
     "esbuild": "^0.27.3",
-    "picomatch": "latest",
     "unstorage": "alpha",
   },
   "catalog": {

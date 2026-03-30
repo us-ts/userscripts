@@ -39,8 +39,6 @@
     "@babel/types": "8.0.0-rc.3",
     "@babel/traverse": "8.0.0-rc.3",
     "@babel/helper-validator-identifier": "8.0.0-rc.3",
-    "unstorage": "alpha",
-    "picomatch": "latest",
-    "@cloudflare/vite-plugin": "latest"
+    "unstorage": "alpha"
   }
 }
