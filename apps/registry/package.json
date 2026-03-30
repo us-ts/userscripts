@@ -2,6 +2,11 @@
   "name": "registry",
   "type": "module",
   "private": true,
+  "imports": {
+    "#styles": "./src/styles/global.css",
+    "#layout": "./src/layouts/Layout.astro",
+    "#components/*": "./src/components/*"
+  },
   "scripts": {
     "build": "astro build",
     "dev": "astro dev",

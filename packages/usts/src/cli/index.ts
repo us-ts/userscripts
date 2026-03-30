@@ -1,62 +1,35 @@
-import { parseArgs } from "node:util";
+#!/usr/bin/env bun
 
-type CLICommand = "help" | "build";
+async function main(): Promise<void> {
+  const bunVersion = process.versions.bun;
 
-type Flags = { watch: boolean };
-
-interface Args {
-  values: Flags;
-  positionals: string[];
-}
-
-async function printHelp() {
-  console.log(`
-usts build - build a userscript
-usts build --watch - build userscript in watch mode
-`);
-}
-
-function isSupportedCommand<T extends CLICommand>(
-  supportedCommands: T[],
-  cmd: string,
-): cmd is T {
-  return new Set<string>(supportedCommands).has(cmd);
-}
-
-function resolveCommand(parsedArgs: Args): CLICommand {
-  const cmd = parsedArgs.positionals[2];
-
-  if (!cmd) {
-    return "help";
-  }
-
-  if (isSupportedCommand(["build"], cmd)) {
-    return cmd;
-  }
-
-  return "help";
-}
-
-async function runCommand(cmd: CLICommand, flags: Flags) {
-  switch (cmd) {
-    case "help": {
-      await printHelp();
-      return;
+  if (bunVersion) {
+    try {
+      const { semver } = await import("bun");
+      const supportedBunVersion = ">=1.3.0";
+      if (!semver.satisfies(bunVersion, supportedBunVersion)) {
+        throw new Error("Unsupported Bun version. Please upgrade Bun.");
+      }
+    } catch {
+      console.error("Unsupported Bun version. Please upgrade Bun.");
+      throw new Error("Unsupported Bun version. Please upgrade Bun.");
     }
-    case "build": {
-      const { build } = await import("./build/index.js");
-      await build({ watch: flags.watch });
-      return;
+  } else {
+    const version = parseInt(process.versions.node, 10) || 0;
+    const minSupportedNodeVersion = 24;
+    if (version < minSupportedNodeVersion) {
+      throw new Error("Unsupported Node version. Please upgrade Node.\n");
     }
   }
+
+  return import("./cli")
+    .then(({ cli }) => cli(process.argv))
+    .catch((error: unknown) => {
+      console.error(error);
+      process.exit(1);
+    });
 }
 
-export async function cli(argv: string[]): Promise<void> {
-  const parsedArgs = parseArgs({
-    args: argv,
-    allowPositionals: true,
-    options: { watch: { type: "boolean", default: false } },
-  });
-  const cmd = resolveCommand(parsedArgs);
-  await runCommand(cmd, parsedArgs.values);
-}
+main()
+  .then(() => process.exit(0))
+  .catch(() => process.exit(1));

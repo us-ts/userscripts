@@ -1,6 +1,6 @@
 import * as rolldown from "rolldown";
 
-import type { ResolvedUserscriptConfig } from "~/config/schema";
+import type { ResolvedUserscriptConfig } from "#config/schema";
 
 import { resolveOptions } from "./options";
 

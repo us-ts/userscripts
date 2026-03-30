@@ -1,35 +1,35 @@
 {
   "name": "usts",
   "version": "0.1.0",
-  "type": "module",
-  "author": "gameroman",
   "license": "MIT",
-  "scripts": {
-    "build": "bunx --bun tsdown",
-    "prepublishOnly": "bun run build",
-    "test": "bun test"
-  },
+  "author": "gameroman",
   "repository": {
     "type": "git",
     "url": "https://github.com/us-ts/userscripts.git",
     "directory": "packages/usts"
   },
+  "bin": {
+    "usts": "./dist/cli.mjs"
+  },
   "files": [
     "dist"
   ],
+  "type": "module",
+  "imports": {
+    "#core/*": "./src/core/*.ts",
+    "#config/*": "./src/config/*.ts"
+  },
   "exports": {
-    "./bin/cli": "./dist/bin/cli.mjs",
+    "./cli": "./dist/cli.mjs",
     "./config": "./dist/config.mjs",
     "./core": "./dist/core.mjs",
     "./package.json": "./package.json",
     "./types": "./dist/virtual.d.ts"
   },
-  "bin": {
-    "usts": "./dist/bin/cli.mjs"
-  },
-  "engines": {
-    "node": ">=24.0.0",
-    "bun": ">=1.3.0"
+  "scripts": {
+    "build": "bunx --bun tsdown",
+    "prepublishOnly": "bun run build",
+    "test": "bun test"
   },
   "dependencies": {
     "rolldown": "catalog:",
@@ -37,5 +37,9 @@
   },
   "devDependencies": {
     "tsdown": "catalog:"
+  },
+  "engines": {
+    "bun": ">=1.3.0",
+    "node": ">=24.0.0"
   }
 }
