@@ -1,11 +1,11 @@
 {
   "name": "usts",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "author": "gameroman",
   "repository": {
     "type": "git",
-    "url": "https://github.com/us-ts/userscripts.git",
+    "url": "git+https://github.com/us-ts/userscripts.git",
     "directory": "packages/usts"
   },
   "bin": {
