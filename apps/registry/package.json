@@ -13,14 +13,14 @@
     "deploy": "wrangler deploy"
   },
   "dependencies": {
-    "astro": "catalog:",
-    "solid-js": "catalog:",
-    "tailwindcss": "catalog:"
+    "astro": "catalog:registry",
+    "solid-js": "catalog:registry",
+    "tailwindcss": "catalog:registry"
   },
   "devDependencies": {
-    "@astrojs/cloudflare": "catalog:",
-    "@astrojs/solid-js": "catalog:",
-    "@tailwindcss/vite": "catalog:",
-    "wrangler": "catalog:"
+    "@astrojs/cloudflare": "catalog:registry",
+    "@astrojs/solid-js": "catalog:registry",
+    "@tailwindcss/vite": "catalog:registry",
+    "wrangler": "catalog:dev"
   }
 }
