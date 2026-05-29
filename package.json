@@ -34,7 +34,7 @@
     "test": "bun run --cwd ./packages/usts test"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.4.15",
+    "@biomejs/biome": "2.4.16",
     "@gameroman/config": "0.1.0"
   },
   "overrides": {
