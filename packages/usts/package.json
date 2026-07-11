@@ -1,19 +1,13 @@
 {
   "name": "usts",
   "version": "0.1.1",
-  "license": "MIT",
-  "author": "gameroman",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/us-ts/userscripts.git",
     "directory": "packages/usts"
   },
-  "bin": {
-    "usts": "./dist/cli.mjs"
-  },
-  "files": [
-    "dist"
-  ],
+  "license": "MIT",
+  "author": "gameroman",
   "type": "module",
   "imports": {
     "#core/*": "./src/core/*.ts",
@@ -26,6 +20,12 @@
     "./package.json": "./package.json",
     "./types": "./dist/virtual.d.ts"
   },
+  "bin": {
+    "usts": "./dist/cli.mjs"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "bunx --bun tsdown",
     "prepublishOnly": "bun run build",

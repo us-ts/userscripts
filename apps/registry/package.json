@@ -1,7 +1,7 @@
 {
   "name": "registry",
-  "type": "module",
   "private": true,
+  "type": "module",
   "imports": {
     "#styles": "./src/styles/global.css",
     "#layout": "./src/layouts/Layout.astro",
@@ -9,8 +9,8 @@
   },
   "scripts": {
     "build": "astro build",
-    "dev": "astro dev",
-    "deploy": "wrangler deploy"
+    "deploy": "wrangler deploy",
+    "dev": "astro dev"
   },
   "dependencies": {
     "astro": "catalog:registry",

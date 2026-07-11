@@ -7,8 +7,8 @@ on:
     branches: [main]
 
 jobs:
-  test:
-    name: Test CLI
+  test-cli:
+    name: Build App, Build and Test CLI
     runs-on: ubuntu-latest
 
     steps:
@@ -21,13 +21,17 @@ jobs:
           bun-version: latest
 
       - name: Install dependencies
-        run: bun install --frozen-lockfile
+        run: bun ci
 
-      - name: Lint code
-        run: bun run lint
+      - parallel:
+          - name: Lint code
+            run: bun run lint
 
-      - name: Build CLI
-        run: bun run build:cli
+          - name: Build App
+            run: bun run build:app
 
-      - name: Run tests
-        run: bun run test
+          - name: Build CLI
+            run: bun run build:cli
+
+      - name: Run CLI tests
+        run: bun run test:cli
