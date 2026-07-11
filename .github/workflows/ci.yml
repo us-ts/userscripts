@@ -28,7 +28,7 @@ jobs:
             run: bun run lint
 
           - name: Build App
-            run: bun run build:cli
+            run: bun run build:app
 
           - name: Build CLI
             run: bun run build:cli
