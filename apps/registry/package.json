@@ -21,6 +21,6 @@
     "@astrojs/cloudflare": "catalog:registry",
     "@astrojs/solid-js": "catalog:registry",
     "@tailwindcss/vite": "catalog:registry",
-    "wrangler": "catalog:dev"
+    "wrangler": "4.110.0"
   }
 }
