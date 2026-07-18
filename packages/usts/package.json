@@ -36,7 +36,7 @@
     "zod": "catalog:cli"
   },
   "devDependencies": {
-    "tsdown": "0.22.7"
+    "tsdown": "0.22.9"
   },
   "engines": {
     "bun": ">=1.3.0",
