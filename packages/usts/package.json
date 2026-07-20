@@ -32,8 +32,8 @@
     "test": "bun test"
   },
   "dependencies": {
-    "rolldown": "catalog:cli",
-    "zod": "catalog:cli"
+    "rolldown": "^1.1.5",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "tsdown": "0.22.7"

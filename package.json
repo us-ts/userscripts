@@ -7,12 +7,7 @@
       "packages/*"
     ],
     "catalogs": {
-      "cli": {
-        "rolldown": "^1.0.1",
-        "zod": "^4.4.3"
-      },
       "registry": {
-        "@astrojs/cloudflare": "14.1.2",
         "@astrojs/solid-js": "7.0.1",
         "@tailwindcss/vite": "4.3.2",
         "astro": "7.0.7",
@@ -31,6 +26,7 @@
     "test:cli": "bun run --cwd ./packages/usts test"
   },
   "overrides": {
+    "@cloudflare/vite-plugin": "1.45.1",
     "esbuild": "0.28.1",
     "get-tsconfig": "5.0.0-beta.5",
     "semver": "7.8.5",
