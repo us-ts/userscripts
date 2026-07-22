@@ -33,7 +33,7 @@
     "unstorage": "2.0.0-alpha.7"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.5.4",
+    "@biomejs/biome": "2.5.5",
     "@gameroman/config": "0.2.5"
   }
 }
