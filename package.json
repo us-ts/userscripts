@@ -26,7 +26,7 @@
     "test:cli": "bun run --cwd ./packages/usts test"
   },
   "overrides": {
-    "@cloudflare/vite-plugin": "1.45.1",
+    "@cloudflare/vite-plugin": "1.46.0",
     "esbuild": "0.28.1",
     "get-tsconfig": "5.0.0-beta.5",
     "semver": "7.8.5",
