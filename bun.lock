@@ -30,7 +30,7 @@
         "usts": "./dist/cli.mjs",
       },
       "dependencies": {
-        "rolldown": "1.2.0",
+        "rolldown": "^1.2.0",
         "zod": "^4.4.3",
       },
       "devDependencies": {
