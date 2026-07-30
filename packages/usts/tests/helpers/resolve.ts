@@ -1,9 +1,9 @@
 import { fileURLToPath } from "bun";
-import {
-  type ResolvedUserscriptConfig,
-  UserscriptConfigSchema,
-  type UserscriptMetaHeaderConfig,
+import type {
+  ResolvedUserscriptConfig,
+  UserscriptMetaHeaderConfig,
 } from "../../src/config/schema";
+import { UserscriptConfigSchema } from "../../src/config/schema";
 
 export function resolveFixture(
   entryPoint: string,

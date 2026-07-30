@@ -5,35 +5,30 @@
     "packages": [
       "apps/*",
       "packages/*"
-    ],
-    "catalogs": {
-      "registry": {
-        "@astrojs/solid-js": "7.0.1",
-        "@tailwindcss/vite": "4.3.2",
-        "astro": "7.0.7",
-        "solid-js": "1.9.14",
-        "tailwindcss": "4.3.2"
-      }
-    }
+    ]
   },
   "scripts": {
     "build": "bun run build:cli",
     "build:app": "bun run --cwd ./apps/registry build",
     "build:cli": "bun run --cwd ./packages/usts build",
-    "format": "biome check --write --linter-enabled=false",
+    "format": "biome check --write",
     "lint": "biome check",
     "test": "bun run test:cli",
     "test:cli": "bun run --cwd ./packages/usts test"
   },
   "overrides": {
-    "@cloudflare/vite-plugin": "1.46.0",
+    "@astrojs/internal-helpers": "0.10.2",
+    "@cloudflare/vite-plugin": "1.48.0",
+    "@emnapi/core": "1.11.2",
+    "@emnapi/runtime": "1.11.2",
     "esbuild": "0.28.1",
     "get-tsconfig": "5.0.0-beta.5",
+    "rolldown": "1.2.0",
     "semver": "7.8.5",
     "unstorage": "2.0.0-alpha.7"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.5.5",
-    "@gameroman/config": "0.2.5"
+    "@biomejs/biome": "2.5.6",
+    "@gameroman/config": "0.2.6"
   }
 }

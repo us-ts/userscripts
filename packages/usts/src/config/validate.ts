@@ -1,10 +1,7 @@
 import * as path from "node:path";
 import * as z from "zod";
-import {
-  type ResolvedUserscriptConfig,
-  type UserscriptConfig,
-  UserscriptConfigSchema,
-} from "./schema";
+import type { ResolvedUserscriptConfig, UserscriptConfig } from "./schema";
+import { UserscriptConfigSchema } from "./schema";
 
 function resolveDir(dir: string, root: string) {
   let resolvedDir = path.resolve(root, dir);
