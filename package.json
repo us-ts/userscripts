@@ -19,7 +19,7 @@
   "overrides": {
     "@astrojs/internal-helpers": "0.10.2",
     "@cloudflare/vite-plugin": "1.50.0",
-    "@emnapi/core": "1.11.2",
+    "@emnapi/core": "1.11.3",
     "@emnapi/runtime": "1.11.2",
     "esbuild": "0.28.1",
     "get-tsconfig": "5.0.0-beta.5",
