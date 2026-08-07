@@ -18,8 +18,8 @@
     "tailwindcss": "4.3.3"
   },
   "devDependencies": {
-    "@astrojs/cloudflare": "14.1.7",
-    "@astrojs/solid-js": "7.0.1",
+    "@astrojs/cloudflare": "14.2.0",
+    "@astrojs/solid-js": "7.0.2",
     "@tailwindcss/vite": "4.3.3",
     "wrangler": "4.118.0"
   }
