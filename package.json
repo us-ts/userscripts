@@ -22,7 +22,7 @@
     "@cloudflare/vite-plugin": "1.52.1",
     "@emnapi/core": "1.11.3",
     "@emnapi/runtime": "1.11.3",
-    "@emnapi/wasi-threads": "1.2.3",
+    "@emnapi/wasi-threads": "2.0.1",
     "esbuild": "0.28.2",
     "get-tsconfig": "5.0.0-beta.6",
     "rolldown": "1.2.4",
