@@ -18,12 +18,14 @@
   },
   "overrides": {
     "@astrojs/internal-helpers": "0.10.2",
+    "@babel/helper-module-imports": "7.29.7",
     "@cloudflare/vite-plugin": "1.52.1",
-    "@emnapi/core": "1.11.2",
-    "@emnapi/runtime": "1.11.2",
+    "@emnapi/core": "1.11.3",
+    "@emnapi/runtime": "1.11.3",
+    "@emnapi/wasi-threads": "1.2.3",
     "esbuild": "0.28.2",
-    "get-tsconfig": "5.0.0-beta.5",
-    "rolldown": "1.2.3",
+    "get-tsconfig": "5.0.0-beta.6",
+    "rolldown": "1.2.4",
     "semver": "7.8.5",
     "unstorage": "2.0.0-alpha.7"
   },
