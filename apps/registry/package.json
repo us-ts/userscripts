@@ -21,6 +21,6 @@
     "@astrojs/cloudflare": "14.1.7",
     "@astrojs/solid-js": "7.0.1",
     "@tailwindcss/vite": "4.3.3",
-    "wrangler": "4.123.0"
+    "wrangler": "4.124.0"
   }
 }
