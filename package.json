@@ -18,7 +18,7 @@
   },
   "overrides": {
     "@babel/helper-module-imports": "7.29.7",
-    "@cloudflare/vite-plugin": "1.54.0",
+    "@cloudflare/vite-plugin": "1.54.1",
     "@emnapi/core": "1.11.3",
     "@emnapi/runtime": "1.11.3",
     "@emnapi/wasi-threads": "2.0.1",
