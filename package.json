@@ -24,7 +24,7 @@
     "@emnapi/wasi-threads": "2.0.1",
     "esbuild": "0.28.2",
     "get-tsconfig": "5.0.0-beta.6",
-    "js-yaml": "npm:neoyaml@0.1.2",
+    "js-yaml": "npm:neoyaml@0.2.0",
     "rolldown": "1.2.6",
     "semver": "7.8.5",
     "unstorage": "2.0.0-alpha.9"
