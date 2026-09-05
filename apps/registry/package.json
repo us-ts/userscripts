@@ -13,12 +13,12 @@
     "dev": "astro dev"
   },
   "dependencies": {
-    "astro": "7.2.8",
+    "astro": "7.3.1",
     "solid-js": "1.9.15",
     "tailwindcss": "4.3.3"
   },
   "devDependencies": {
-    "@astrojs/cloudflare": "14.2.5",
+    "@astrojs/cloudflare": "14.3.0",
     "@astrojs/solid-js": "7.0.2",
     "@tailwindcss/vite": "4.3.3",
     "wrangler": "4.128.0"
