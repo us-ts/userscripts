@@ -1,3 +1,3 @@
 # USTS
 
-A userscript bundler powered by [rolldown](https://www.npmjs.com/package/rolldown).
+A userscript bundler powered by [rolldown](https://npmx.dev/rolldown)
