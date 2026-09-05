@@ -8,7 +8,7 @@ on:
 
 jobs:
   test-cli:
-    name: Build App, Build and Test CLI
+    name: Build and Test CLI
     runs-on: ubuntu-latest
 
     steps:
@@ -26,9 +26,6 @@ jobs:
       - parallel:
           - name: Lint code
             run: bun run lint
-
-          - name: Build App
-            run: bun run build:app
 
           - name: Build CLI
             run: bun run build:cli

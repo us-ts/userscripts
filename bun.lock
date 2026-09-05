@@ -25,17 +25,7 @@
     },
   },
   "overrides": {
-    "@babel/helper-module-imports": "7.29.7",
-    "@cloudflare/vite-plugin": "1.54.4",
-    "@emnapi/core": "1.11.3",
-    "@emnapi/runtime": "1.11.3",
-    "@emnapi/wasi-threads": "2.1.0",
-    "esbuild": "0.28.2",
-    "get-tsconfig": "5.0.0-beta.6",
-    "js-yaml": "npm:neoyaml@0.2.0",
     "rolldown": "1.2.7",
-    "semver": "7.8.5",
-    "unstorage": "2.0.0-alpha.10",
   },
   "packages": {
     "@biomejs/biome": ["@biomejs/biome@2.5.12", "", { "optionalDependencies": { "@biomejs/cli-darwin-arm64": "2.5.12", "@biomejs/cli-darwin-x64": "2.5.12", "@biomejs/cli-linux-arm64": "2.5.12", "@biomejs/cli-linux-arm64-musl": "2.5.12", "@biomejs/cli-linux-x64": "2.5.12", "@biomejs/cli-linux-x64-musl": "2.5.12", "@biomejs/cli-win32-arm64": "2.5.12", "@biomejs/cli-win32-x64": "2.5.12" }, "bin": { "biome": "bin/biome" } }, "sha512-Lw4VHZRebrReBBnlHa12JQjnIBm3JJAA55PDB9LbBVBF0q4RYphm6KfmIjqtPhf61MxZ5Q9KoK8R8x+7per5Aw=="],
