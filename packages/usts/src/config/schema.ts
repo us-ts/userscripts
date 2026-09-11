@@ -138,9 +138,9 @@ const UserscriptConfigSchema: z.ZodObject<{
 type UserscriptConfig = z.input<typeof UserscriptConfigSchema>;
 type ResolvedUserscriptConfig = z.output<typeof UserscriptConfigSchema>;
 
-export {
-  type ResolvedUserscriptConfig,
-  type UserscriptConfig,
-  UserscriptConfigSchema,
-  type UserscriptMetaHeaderConfig,
+export type {
+  ResolvedUserscriptConfig,
+  UserscriptConfig,
+  UserscriptMetaHeaderConfig,
 };
+export { UserscriptConfigSchema };
