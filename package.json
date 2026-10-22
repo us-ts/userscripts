@@ -18,7 +18,7 @@
     "rolldown": "1.2.14"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.5.15",
+    "@biomejs/biome": "2.6.2",
     "@gameroman/config": "0.3.0"
   }
 }
