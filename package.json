@@ -15,7 +15,7 @@
     "test:cli": "bun run --cwd ./packages/usts test"
   },
   "overrides": {
-    "rolldown": "1.2.14"
+    "rolldown": "1.2.15"
   },
   "devDependencies": {
     "@biomejs/biome": "2.6.2",
